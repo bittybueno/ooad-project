@@ -1,6 +1,6 @@
 package Product;
 
-abstract class Beverage extends Product{
+abstract public class Beverage extends Product{
     private String type = "Beverage";
 
     public abstract double cost();

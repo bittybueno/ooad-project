@@ -5,24 +5,24 @@ import Employee.Employee;
 
 import java.util.ArrayList;
 
-public class CustomerRecord implements Record {
+public class CustomerRecord {
     private String type;
-    private ArrayList<Customer> customerRecord;
+    public ArrayList<Customer> customers;
 
     public CustomerRecord() {
         this.type = "Customer";
 
         ArrayList<Customer> customerRecord = new ArrayList<Customer>();
-        this.customerRecord = customerRecord;
+        this.customers = customerRecord;
 
     }
 
     public ArrayList<Customer> getCustomerRecord() {
-        return customerRecord;
+        return customers;
     }
 
 
-    public void add() {}
+    public void add(Customer c) { this.customers.add(c); }
     public void update() {}
     public void get() {}
 }

@@ -4,24 +4,24 @@ import Customer.Customer;
 
 import java.util.ArrayList;
 
-public class SalesRecord implements Record {
+public class SalesRecord {
     private String type;
-    private ArrayList<Reciept> salesRecord;
+    private ArrayList<Reciept> sales;
 
     public SalesRecord() {
         this.type = "Sales";
 
-        ArrayList<Reciept> salesRecord = new ArrayList<Reciept>();
-        this.salesRecord = salesRecord;
+        ArrayList<Reciept> sales = new ArrayList<Reciept>();
+        this.sales = sales;
 
     }
 
     public ArrayList<Reciept> getCustomerRecord() {
-        return salesRecord;
+        return sales;
     }
 
 
-    public void add() {}
+    public void add(Reciept r) { this.sales.add(r);}
     public void update() {}
     public void get() {}
 }

@@ -8,6 +8,7 @@ public class Cashier extends Employee{
 
     void takeOrder() {
 
+
     }
 
     boolean isRewardsCustomer() {
