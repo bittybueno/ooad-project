@@ -1,13 +1,15 @@
 package Cafe;
 
-import Employee.Employee;
+import Employee.Manager;
+import Employee.Observer;
 import Product.Product;
 
 import java.util.ArrayList;
 
-public class InventoryRecord implements Record{
+public class InventoryRecord implements Record, Subject{
     private String type;
     private ArrayList<Product> inventoryRecord;
+    private Manager observer;
 
     public InventoryRecord() {
         this.type = "Inventory";
@@ -21,6 +23,8 @@ public class InventoryRecord implements Record{
         return inventoryRecord;
     }
 
+
+    public void notifyObservers() {}
 
     public void add() {}
     public void update() {}

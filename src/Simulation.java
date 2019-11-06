@@ -1,6 +1,7 @@
 import Cafe.Reciept;
 import Employee.*;
 import Customer.*;
+import Product.*;
 
 import java.util.ArrayList;
 
@@ -30,17 +31,37 @@ public class Simulation {
 
     ArrayList<Customer> createCustomerRecord(){
         ArrayList<Customer> customerRecord = new ArrayList<Customer>();
+        customerRecord.add(new Customer("David", true));
+        customerRecord.add(new Customer("Jozi", true));
+        customerRecord.add(new Customer("Terri", true));
+
 
         return customerRecord;
+    }
+
+    ArrayList<Product> createProducts(){
+        SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
+        BeverageStore beverageStore = new BeverageStore(beverageFactory);
+
+        ArrayList<Product> inventory = new ArrayList<Product>();
+
+        inventory.add(beverageStore.createBeverage("Coffee"));
+
+
+        return inventory;
     }
 
 
 
 
 
-
-
     public static void main(String[] args) {
+        Simulation sim = new Simulation();
+        ArrayList<Customer> customers = sim.createCustomerRecord();
+        ArrayList<Employee> employees = sim.createEmployees();
+        ArrayList<Product> inventory = sim.createProducts();
+        ArrayList<Reciept> salesRecord = sim.createSalesRecord();
 
+        System.out.println(inventory);
     }
 }
