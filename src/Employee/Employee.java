@@ -1,5 +1,6 @@
 package Employee;
 import java.util.UUID;
+import Cafe.*;
 
 abstract public class Employee {
 
@@ -7,21 +8,28 @@ abstract public class Employee {
     private String firstName;
     private String lastName;
     private int employeeID;
+    private Cafe cafe;
 
-    public Employee(String firstName, String lastName, int payRate, int employeeID) {
+    public Cafe getCafe() {
+        return cafe;
+    }
+
+    public Employee(String firstName, String lastName, int payRate, int employeeID, Cafe cafe) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.payRate = payRate;
         this.employeeID = employeeID;
+        this.cafe = cafe;
     }
 
     public String getName() {
-        return firstName + lastName;
+        return firstName + " " +lastName;
     }
 
     public int getEmployeeID() {
         return employeeID;
     }
+
 
     public int getPayRate() {
         return payRate;

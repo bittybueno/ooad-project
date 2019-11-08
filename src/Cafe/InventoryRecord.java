@@ -32,6 +32,12 @@ public class InventoryRecord implements Subject{
         this.inventory.put(product, value);
     }
 
-    public void update() {}
+    public void update(String type, int quantity) {
+        inventory.put(type, inventory.get(type) - quantity);
+        if (inventory.get(type) == 0) {
+            // notify manager
+            notifyObservers();
+        }
+    }
     public void get() {}
 }

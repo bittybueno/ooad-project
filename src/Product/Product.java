@@ -7,4 +7,6 @@ abstract public class Product {
         return description;
     }
 
+    public abstract double cost();
+
 }

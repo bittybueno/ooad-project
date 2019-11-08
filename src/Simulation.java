@@ -8,6 +8,9 @@ import java.util.*;
 public class Simulation {
     public ArrayList<Customer> newCustomers;
     public CustomerRecord loyalCustomersRecord;
+    String[] beverageMenu = {"Coffee", "Espresso", "Flat", "White", "Cappuccino", "Tea"};
+    String[] pastryMenu = {"Muffin"};
+    ArrayList<String> toppingsMenu;
     public int maxLoyal;
     public int min;
 
@@ -17,18 +20,31 @@ public class Simulation {
         this.min = 0;
     }
 
-    EmployeeRecord createEmployees(){
+    public void setMenu() {
+        ArrayList<String> beverageMenu = new ArrayList<>();
+        beverageMenu.add("Coffee");
+
+        ArrayList<String> pastryMenuy = new ArrayList<>();
+        beverageMenu.add("Muffin");
+
+        ArrayList<String> toppingsMenu = new ArrayList<>();
+        beverageMenu.add("Whip Cream");
+
+        this.toppingsMenu = toppingsMenu;
+    }
+
+    EmployeeRecord createEmployees(Cafe cafe){
         EmployeeRecord employeeRecord = new EmployeeRecord();
-        employeeRecord.add(Manager.getInstance());
+        employeeRecord.add(Manager.getInstance(cafe));
 
         // BARISTA
-        employeeRecord.add(new Barista("David", "Baker", 2));
+        employeeRecord.add(new Barista("David", "Baker", 2, cafe));
 
         //CASHIER
-        employeeRecord.add(new Cashier("Katie", "Andrews", 4));
+        employeeRecord.add(new Cashier("Katie", "Andrews", 4, cafe));
 
         //CHEF
-        employeeRecord.add(new Chef("Bobby", "Day", 7));
+        employeeRecord.add(new Chef("Bobby", "Day", 7, cafe));
 
         return employeeRecord;
     }
@@ -103,8 +119,69 @@ public class Simulation {
 
     }
 
-    Order createOrder(int numberOfItems,String customerName, ArrayList<Beverage> beverageOrder, ArrayList<Pastry> kitchenOrder) {
-        Order order = new Order(numberOfItems, customerName, beverageOrder, kitchenOrder);
+    HashMap<String, Employee> employeesForTheDay(EmployeeRecord employeesForCafe) {
+        ArrayList<Employee> employeeRecord = employeesForCafe.getEmployees();
+        HashMap<String, Employee>  employees = new HashMap<String, Employee> ();
+        Collections.shuffle(employeeRecord);
+        // select a random barista
+
+        int i = 0;
+        while (i < employeeRecord.size()) {
+            if (employeeRecord.get(i) instanceof Barista) {
+                employees.put("Barista",employeeRecord.get(i));
+                break;
+            }
+            i++;
+        }
+        int j = 0;
+
+        while (j < employeeRecord.size()) {
+            if (employeeRecord.get(j) instanceof Cashier) {
+                employees.put("Cashier",employeeRecord.get(j));
+                break;
+            }
+            j++;
+        }
+
+        int m = 0;
+        while (m < employeeRecord.size()) {
+            if (employeeRecord.get(m) instanceof Manager) {
+                employees.put("Manager",employeeRecord.get(m));
+                break;
+            }
+            m++;
+        }
+
+
+        return employees;
+
+    }
+
+    int randomBeverageOrder() {
+        return 1 + (int)(Math.random() * ((5 - 1) + 1));
+    }
+
+    public ArrayList<String> randomToppingsOrder() {
+        int numOfToppings = 1 + (int)(Math.random() * ((3 - 1) + 1));
+        int i = 0;
+        ArrayList<String> toppings = new ArrayList<String>();
+
+        Collections.shuffle(this.toppingsMenu);
+        while (i < numOfToppings) {
+            toppings.add(this.toppingsMenu.get(i));
+            i++;
+        }
+
+        return toppings;
+    }
+
+    int randomPastryOrder() {
+        return 0;
+    }
+
+    Order Order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
+        Order order = new Order(customer, this.beverageMenu[this.randomBeverageOrder()], this.pastryMenu[this.randomPastryOrder()], randomToppingsOrder(),barista, chef);
+        cashier.takeOrder(order);
         return order;
     }
 
@@ -113,23 +190,43 @@ public class Simulation {
     }
 
 
+    public void daySimulation() {
+
+    }
 
 
 
     public static void main(String[] args) {
         Simulation sim = new Simulation();
 
-        EmployeeRecord employees = sim.createEmployees();
         SalesRecord sales = sim.createSalesRecord();
         CustomerRecord customers = sim.createCustomerRecord();
         InventoryRecord inventory = sim.createInventory();
 
-        Cafe cafe = new Cafe(sales, inventory, employees, customers);
+        Cafe cafe = new Cafe(sales, inventory, customers);
+
+        EmployeeRecord employees = sim.createEmployees(cafe);
+        cafe.setEmployeeRecord(employees);
+
 
         ArrayList<Customer> customersForDay = sim.customersForTheDay();
         for (int i = 0; i < customersForDay.size(); i++) {
-            System.out.println(customersForDay.get(i).getName() + " is Loyal Member: " + customersForDay.get(i).isLoyal());
+//            System.out.println(customersForDay.get(i).getName() + " is Loyal Member: " + customersForDay.get(i).isLoyal());
+
         }
+
+        // cashiers take orders
+//        ArrayList<Employee> employeesForDay = sim.employeesForTheDay(cafe.getEmployeeRecord());
+//        for (int i = 0; i < employeesForDay.size(); i++) {
+//            System.out.println(employeesForDay.get(i).getName());
+//        }
+//        ArrayList<Employee> employeesForDay = sim.employeesForTheDay(cafe.getEmployeeRecord());
+//        for (int i = 0; i < employeesForDay.size(); i++) {
+//            Employee e = employeesForDay.get(i);
+//            System.out.println("###### Employee Information ######");
+//            System.out.println("Employee Name: " + e.getName());
+//            System.out.println("Employee ID: " + e.getEmployeeID());
+//        }
 
 
     }

@@ -1,15 +1,16 @@
 package Employee;
+import Cafe.*;
 
 public class Chef extends Employee implements KitchenEmployee {
-    public Chef(String firstName, String lastName, int employeeID) {
-        super(firstName, lastName,35, employeeID);
+    public Chef(String firstName, String lastName, int employeeID, Cafe cafe) {
+        super(firstName, lastName,35, employeeID, cafe);
     }
 
     public void serve(){
 
     }
 
-    public void prepareOrder(){
+    public void prepareOrder(String type){
 
     }
 }

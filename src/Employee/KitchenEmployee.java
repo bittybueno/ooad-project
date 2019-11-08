@@ -2,5 +2,5 @@ package Employee;
 
 public interface KitchenEmployee {
     void serve();
-    void prepareOrder();
+    void prepareOrder(String type);
 }

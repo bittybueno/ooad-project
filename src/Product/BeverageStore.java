@@ -9,7 +9,7 @@ public  class BeverageStore {
     }
     public Beverage createBeverage(String type) {
         Beverage beverage;
-        beverage = factory.createBeverag(type);
+        beverage = factory.createBeverage(type);
         return beverage;
     }
 

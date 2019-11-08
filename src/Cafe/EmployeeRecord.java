@@ -16,7 +16,7 @@ public class EmployeeRecord {
 
     }
 
-    public ArrayList<Employee> getEmployeeRecord() {
+    public ArrayList<Employee> getEmployees() {
         return employees;
     }
 
