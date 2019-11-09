@@ -8,8 +8,9 @@ import java.util.*;
 public class Simulation {
     public ArrayList<Customer> newCustomers;
     public CustomerRecord loyalCustomersRecord;
-    String[] beverageMenu = {"Coffee", "Espresso", "Flat", "White", "Cappuccino", "Tea"};
-    String[] pastryMenu = {"Muffin"};
+    public Cafe cafe;
+    ArrayList<String> beverageMenu;
+    ArrayList<String> pastryMenu;
     ArrayList<String> toppingsMenu;
     public int maxLoyal;
     public int min;
@@ -133,14 +134,23 @@ public class Simulation {
             }
             i++;
         }
-        int j = 0;
 
+        int j = 0;
         while (j < employeeRecord.size()) {
             if (employeeRecord.get(j) instanceof Cashier) {
                 employees.put("Cashier",employeeRecord.get(j));
                 break;
             }
             j++;
+        }
+
+        int l = 0;
+        while (l < employeeRecord.size()) {
+            if (employeeRecord.get(l) instanceof Chef) {
+                employees.put("Chef",employeeRecord.get(l));
+                break;
+            }
+            l++;
         }
 
         int m = 0;
@@ -157,30 +167,37 @@ public class Simulation {
 
     }
 
-    int randomBeverageOrder() {
-        return 1 + (int)(Math.random() * ((5 - 1) + 1));
+    public ArrayList<String> randomBeverageOrder() {
+//        return 1 + (int)(Math.random() * ((5 - 1) + 1));
+
+        ArrayList<String> beverage = new ArrayList<String>();
+        beverage.add("Coffee");
+        return beverage;
     }
 
     public ArrayList<String> randomToppingsOrder() {
-        int numOfToppings = 1 + (int)(Math.random() * ((3 - 1) + 1));
-        int i = 0;
+//        int numOfToppings = 1 + (int)(Math.random() * ((3 - 1) + 1));
+//        int i = 0;
         ArrayList<String> toppings = new ArrayList<String>();
-
-        Collections.shuffle(this.toppingsMenu);
-        while (i < numOfToppings) {
-            toppings.add(this.toppingsMenu.get(i));
-            i++;
-        }
+        toppings.add("Whip Cream");
+//        Collections.shuffle(this.toppingsMenu);
+//        while (i < numOfToppings) {
+//            toppings.add(this.toppingsMenu.get(i));
+//            i++;
+//        }
 
         return toppings;
     }
 
-    int randomPastryOrder() {
-        return 0;
+    public ArrayList<String> randomPastryOrder() {
+
+        ArrayList<String> pastry = new ArrayList<String>();
+        pastry.add("Muffin");
+        return pastry;
     }
 
-    Order Order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
-        Order order = new Order(customer, this.beverageMenu[this.randomBeverageOrder()], this.pastryMenu[this.randomPastryOrder()], randomToppingsOrder(),barista, chef);
+    Order order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
+        Order order = new Order(customer, randomBeverageOrder(), randomPastryOrder(), randomToppingsOrder(),barista, chef);
         cashier.takeOrder(order);
         return order;
     }
@@ -191,7 +208,23 @@ public class Simulation {
 
 
     public void daySimulation() {
+        HashMap<String, Employee> employees = employeesForTheDay(cafe.getEmployeeRecord());
+        ArrayList<Customer> customers = customersForTheDay();
+        for (int i = 0; i < customers.size(); i++) {
+            System.out.println(customers.get(i).getName());
+            order(customers.get(i), (Cashier) employees.get("Cashier"), (Barista) employees.get("Barista"), (Chef) employees.get("Chef"));
+        }
+    }
 
+    public void setCafe(Cafe cafe) {this.cafe = cafe;}
+
+    public void weeklySim(){
+        cafe.getInventoryRecord().prettyPrint();
+        for (int i = 0; i < 8; i++) {
+            System.out.println("\n\n####### Day " + i + "#######");
+            daySimulation();
+        }
+        cafe.getInventoryRecord().prettyPrint();
     }
 
 
@@ -208,12 +241,16 @@ public class Simulation {
         EmployeeRecord employees = sim.createEmployees(cafe);
         cafe.setEmployeeRecord(employees);
 
+        sim.setCafe(cafe);
+        sim.setMenu();
 
-        ArrayList<Customer> customersForDay = sim.customersForTheDay();
-        for (int i = 0; i < customersForDay.size(); i++) {
+//        sim.daySimulation();
+        sim.weeklySim();
+//        ArrayList<Customer> customersForDay = sim.customersForTheDay();
+//        for (int i = 0; i < customersForDay.size(); i++) {
 //            System.out.println(customersForDay.get(i).getName() + " is Loyal Member: " + customersForDay.get(i).isLoyal());
-
-        }
+//
+//        }
 
         // cashiers take orders
 //        ArrayList<Employee> employeesForDay = sim.employeesForTheDay(cafe.getEmployeeRecord());

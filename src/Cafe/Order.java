@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Order {
 
     private Customer customer;
-    private String kitchenOrder;
-    private String beverageOrder;
+    private ArrayList<String> kitchenOrder;
+    private ArrayList<String> beverageOrder;
     private Barista barista;
     private Chef chef;
     private ArrayList<String> toppings;
@@ -22,23 +22,40 @@ public class Order {
         return customer;
     }
 
-    public String getKitchenOrder() {
+    public ArrayList<String> getKitchenOrder() {
         return kitchenOrder;
     }
 
-    public String getBeverageOrder() {
+    public ArrayList<String> getBeverageOrder() {
         return beverageOrder;
     }
 
     public ArrayList<String> getToppings() { return toppings; }
 
 
-    public Order(Customer customer, String beverageOrder, String kitchenOrder, ArrayList<String> toppings, Barista barista, Chef chef) {
+    public Order(Customer customer, ArrayList<String> beverageOrder, ArrayList<String> kitchenOrder, ArrayList<String> toppings, Barista barista, Chef chef) {
         this.customer = customer;
         this.kitchenOrder = kitchenOrder;
         this.beverageOrder = beverageOrder;
         this.barista = barista;
         this.chef = chef;
         this.toppings = toppings;
+    }
+
+    public void prettyPrint() {
+        System.out.println("\nBeverage Order: ");
+        for (int i = 0; i < beverageOrder.size(); i++) {
+            System.out.println(beverageOrder.get(i));
+        }
+
+        System.out.println("\nKitchen Order: ");
+        for (int i = 0; i < kitchenOrder.size(); i++) {
+            System.out.println(kitchenOrder.get(i));
+        }
+
+        System.out.println("\nAdd Ons: ");
+        for (int i = 0; i < toppings.size(); i++) {
+            System.out.println(toppings.get(i));
+        }
     }
 }

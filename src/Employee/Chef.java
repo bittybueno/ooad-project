@@ -11,6 +11,9 @@ public class Chef extends Employee implements KitchenEmployee {
     }
 
     public void prepareOrder(String type){
-
+        cook();
+        finished();
     }
+    public void cook() { System.out.println("... Cooking...");}
+    public void finished() { System.out.println("... Finished...");}
 }

@@ -39,5 +39,15 @@ public class InventoryRecord implements Subject{
             notifyObservers();
         }
     }
+
+    public void prettyPrint() {
+        //Map<String,String> map
+//        inventory.forEach(e -> System.out.printf("%s: %s", inventory.k));
+        System.out.println("\n________Cafe Inventory________");
+        for ( String key : inventory.keySet() ) {
+            System.out.printf( "\n%s: %d", key, inventory.get(key) );
+        }
+        System.out.println("\n______________________________\n");
+    }
     public void get() {}
 }

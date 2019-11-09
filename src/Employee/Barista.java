@@ -16,9 +16,11 @@ public class Barista extends Employee implements KitchenEmployee{
 
     public void prepareOrder(String type){
         brew();
+        finished();
     }
 
     public void brew() { System.out.println("... Brewing...");}
+    public void finished() { System.out.println("... Finished...");}
 
 
 }
