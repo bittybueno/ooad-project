@@ -23,17 +23,19 @@ public class Cashier extends Employee{
         Chef chef = order.getChef();
 
         ArrayList<Product> finishedOrder = new ArrayList<Product>();
-        for (int i = 0; i < order.getBeverageOrder().size(); i++) {
-            // BEVERAGE
-            Beverage beverage = beverageStore.createBeverage(order.getBeverageOrder().get(i));
-            beverage = addToppings(order.getToppings(), beverage);
+        if (order.getBeverageOrder().size() > 0) {
+            for (int i = 0; i < order.getBeverageOrder().size(); i++) {
+                // BEVERAGE
+                Beverage beverage = beverageStore.createBeverage(order.getBeverageOrder().get(i));
+                beverage = addToppings(order.getToppings(), beverage);
 
-            barista.prepareOrder(order.getBeverageOrder().get(i));
+                barista.prepareOrder(order.getBeverageOrder().get(i));
 
-            getCafe().getInventoryRecord().update(order.getBeverageOrder().get(i), 1);
+                getCafe().getInventoryRecord().update(order.getBeverageOrder().get(i), order.getBeverageOrder().size());
 
-            finishedOrder.add(beverage);
-            price = price + beverage.cost();
+                finishedOrder.add(beverage);
+                price = price + beverage.cost();
+            }
         }
 
         for (int i = 0; i < order.getKitchenOrder().size(); i++) {
@@ -42,7 +44,7 @@ public class Cashier extends Employee{
             Pastry pastry = pastryStore.createPastry(kitchenOrder);
 
             chef.prepareOrder(kitchenOrder);
-            getCafe().getInventoryRecord().update(order.getKitchenOrder().get(i), 1);
+            getCafe().getInventoryRecord().update(order.getKitchenOrder().get(i), order.getKitchenOrder().size());
 
             finishedOrder.add(pastry);
             price = price + pastry.cost();
@@ -69,6 +71,7 @@ public class Cashier extends Employee{
 
         // update sales record
         this.getCafe().getSalesRecord().add(reciept);
+        orderUp();
     }
 
     public Beverage addToppings(ArrayList<String> toppings, Beverage beverage) {
@@ -105,7 +108,7 @@ public class Cashier extends Employee{
     }
 
     void orderUp() {
-
+        System.out.println("Order Up!");
     }
 
     void finishTransaction() {

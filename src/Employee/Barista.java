@@ -15,12 +15,12 @@ public class Barista extends Employee implements KitchenEmployee{
     }
 
     public void prepareOrder(String type){
-        brew();
+        brew(type);
         finished();
     }
 
-    public void brew() { System.out.println("... Brewing...");}
-    public void finished() { System.out.println("... Finished...");}
+    public void brew(String type) { System.out.println("\n...Brewing " + type + "...");}
+    public void finished() { System.out.println("...Finished...");}
 
 
 }

@@ -8,6 +8,9 @@ public class SimplePastryFactory {
         if (type.equals("Muffin")) {
             pastry = new Muffin();
         }
+        if (type.equals("Banana Bread")) {
+            pastry = new BananaBread();
+        }
 
         return pastry;
     }

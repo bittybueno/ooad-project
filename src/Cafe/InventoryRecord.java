@@ -33,7 +33,9 @@ public class InventoryRecord implements Subject{
     }
 
     public void update(String type, int quantity) {
-        inventory.put(type, inventory.get(type) - quantity);
+//        System.out.println("HERE "+quantity + type);
+        int newValue = inventory.get(type) - quantity;
+        inventory.put(type, newValue);
         if (inventory.get(type) == 0) {
             // notify manager
             notifyObservers();

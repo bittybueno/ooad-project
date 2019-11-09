@@ -9,6 +9,9 @@ public class SimpleBeverageFactory {
         if (type.equals("Coffee")) {
             beverage = new Coffee();
         }
+        if (type.equals("Espresso")) {
+            beverage = new Espresso();
+        }
 
         return beverage;
     }

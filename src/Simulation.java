@@ -24,14 +24,18 @@ public class Simulation {
     public void setMenu() {
         ArrayList<String> beverageMenu = new ArrayList<>();
         beverageMenu.add("Coffee");
+        beverageMenu.add("Espresso");
 
-        ArrayList<String> pastryMenuy = new ArrayList<>();
-        beverageMenu.add("Muffin");
+        ArrayList<String> pastryMenu = new ArrayList<>();
+        pastryMenu.add("Muffin");
+        pastryMenu.add("Banana Bread");
 
         ArrayList<String> toppingsMenu = new ArrayList<>();
-        beverageMenu.add("Whip Cream");
+        toppingsMenu.add("Whip Cream");
 
         this.toppingsMenu = toppingsMenu;
+        this.beverageMenu = beverageMenu;
+        this.pastryMenu = pastryMenu;
     }
 
     EmployeeRecord createEmployees(Cafe cafe){
@@ -71,19 +75,11 @@ public class Simulation {
 
     InventoryRecord createInventory(){
         InventoryRecord inventory = new InventoryRecord();
-//        SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
-//        BeverageStore beverageStore = new BeverageStore(beverageFactory);
-//
-//        ArrayList<Product> inventory = new ArrayList<Product>();
-//
-//        inventory.add(beverageStore.createBeverage("Coffee"));
-//        inventory.add(beverageStore.createBeverage("Coffee"));
-//        inventory.add(beverageStore.createBeverage("Coffee"));
-//        inventory.add(beverageStore.createBeverage("Coffee"));
-//        inventory.add(beverageStore.createBeverage("Coffee"));
 
         inventory.add("Coffee", 300);
+        inventory.add("Espresso", 300);
         inventory.add("Muffin", 100);
+        inventory.add("Banana Bread", 100);
 
 
 
@@ -168,10 +164,16 @@ public class Simulation {
     }
 
     public ArrayList<String> randomBeverageOrder() {
-//        return 1 + (int)(Math.random() * ((5 - 1) + 1));
-
         ArrayList<String> beverage = new ArrayList<String>();
-        beverage.add("Coffee");
+        int numOfBevs =  1 + (int)(Math.random() * ((3 - 1) + 1));
+
+        int i = 0;
+        while (i < numOfBevs) {
+            int index = ((int)(Math.random() * beverageMenu.size() + 1)) - 1;
+            beverage.add(beverageMenu.get(index));
+            i++;
+        }
+
         return beverage;
     }
 
@@ -192,12 +194,42 @@ public class Simulation {
     public ArrayList<String> randomPastryOrder() {
 
         ArrayList<String> pastry = new ArrayList<String>();
-        pastry.add("Muffin");
+        int numOfPastries =  1 + (int)(Math.random() * ((2 - 1) + 1));
+
+        int i = 0;
+        while (i < numOfPastries) {
+            int index = ((int)(Math.random() * pastryMenu.size() + 1)) - 1;
+            pastry.add(pastryMenu.get(index));
+            i++;
+        }
+
         return pastry;
     }
 
     Order order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
-        Order order = new Order(customer, randomBeverageOrder(), randomPastryOrder(), randomToppingsOrder(),barista, chef);
+        ArrayList<String> bevOrder = randomBeverageOrder();
+        ArrayList<String> pastryOrder = randomPastryOrder();
+        ArrayList<String> toppings = randomToppingsOrder();
+
+        System.out.printf(customer.getName() + " would like ");
+//        pastryOrder.forEach(System.out::printf);
+//        toppings.forEach(System.out::printf);
+
+        Iterator bevIter = bevOrder.iterator();
+        while (bevIter.hasNext()) {
+            System.out.print(bevIter.next() + ", ");
+        }
+        Iterator pastryIter = pastryOrder.iterator();
+        while (pastryIter.hasNext()) {
+            System.out.print(pastryIter.next());
+        }
+        Iterator toppingIter = toppings.iterator();
+        while (toppingIter.hasNext()) {
+            System.out.printf(", " + toppingIter.next());
+        }
+
+
+        Order order = new Order(customer, bevOrder, pastryOrder, toppings,barista, chef);
         cashier.takeOrder(order);
         return order;
     }
@@ -211,7 +243,6 @@ public class Simulation {
         HashMap<String, Employee> employees = employeesForTheDay(cafe.getEmployeeRecord());
         ArrayList<Customer> customers = customersForTheDay();
         for (int i = 0; i < customers.size(); i++) {
-            System.out.println(customers.get(i).getName());
             order(customers.get(i), (Cashier) employees.get("Cashier"), (Barista) employees.get("Barista"), (Chef) employees.get("Chef"));
         }
     }
