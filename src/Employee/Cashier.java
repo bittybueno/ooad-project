@@ -20,9 +20,14 @@ public class Cashier extends Employee{
     public void takeOrder(Order order) {
 //        double price = 0.0;
         double price = order.execute();
+        Barista barista = order.getBarista();
+        Chef chef = order.getChef();
 
-//        Barista barista = order.getBarista();
-//        Chef chef = order.getChef();
+        // BARISTA
+        barista.orderUp(order);
+
+
+
 //
 //        ArrayList<Product> finishedOrder = new ArrayList<Product>();
 //        if (order.getBeverageOrder().size() > 0) {

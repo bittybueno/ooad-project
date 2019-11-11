@@ -4,7 +4,7 @@ import Product.*;
 import Employee.*;
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements Command{
 
     private Customer customer;
     private ArrayList<String> kitchenOrder;
@@ -35,19 +35,16 @@ public class Order {
         Barista barista = this.getBarista();
         Chef chef = this.getChef();
 
-        ArrayList<Product> finishedOrder = new ArrayList<Product>();
         if (this.getBeverageOrder().size() > 0) {
             for (int i = 0; i < this.getBeverageOrder().size(); i++) {
                 // BEVERAGE
                 Beverage beverage = beverageStore.createBeverage(this.getBeverageOrder().get(i));
                 beverage = addToppings(this.getToppings(), beverage);
 
-                barista.prepareOrder(this.getBeverageOrder().get(i));
-
+                barista.announce(this.getBeverageOrder().get(i));
                 this.cafe.getInventoryRecord().update(this.getBeverageOrder().get(i), this.getBeverageOrder().size());
 
-                finishedOrder.add(beverage);
-                price = price + beverage.cost();
+                price += beverage.cost();
             }
         }
 
@@ -56,11 +53,10 @@ public class Order {
             String kitchenOrder = this.getKitchenOrder().get(i);
             Pastry pastry = pastryStore.createPastry(kitchenOrder);
 
-            chef.prepareOrder(kitchenOrder);
+            chef.announce(kitchenOrder);
             this.cafe.getInventoryRecord().update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
 
-            finishedOrder.add(pastry);
-            price = price + pastry.cost();
+            price += pastry.cost();
         }
         return price;
     }

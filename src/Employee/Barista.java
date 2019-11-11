@@ -6,21 +6,24 @@ public class Barista extends Employee implements KitchenEmployee{
     SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
     BeverageStore beverageStore = new BeverageStore(beverageFactory);
 
+    private Order order;
+
     public Barista(String firstName, String lastName, int employeeID, Cafe cafe) {
         super(firstName, lastName,20, employeeID, cafe);
     }
 
-    public void serve(){
-
+    public void orderUp(Order order){
+        this.order = order;
+        order.execute();
     }
 
-    public void prepareOrder(String type){
+    public void announce(String type){
         brew(type);
-        finished(type);
+        serve(type);
     }
 
     public void brew(String type) { System.out.println("\n...Brewing " + type + "...");}
-    public void finished(String type) { System.out.println("...Finished "+ type + "...\n");}
+    public void serve(String type) { System.out.println("...Finished "+ type + "...\n");}
 
 
 }
