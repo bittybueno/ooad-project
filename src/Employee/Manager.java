@@ -4,6 +4,7 @@ import Cafe.*;
 public class Manager extends Employee {
 
     private static Manager manager;
+    private Cafe cafe;
 
     // private constructor to force use of
     // getInstance() to create Singleton object
@@ -17,6 +18,12 @@ public class Manager extends Employee {
             manager = new Manager("Jeffery", "Diaz", 1, cafe);
         }
         return manager;
+    }
+
+    public void orderInventory() {
+        System.out.println(manager.getName() + " is filling the inventory\n\n");
+        this.getCafe().getInventoryRecord().fillInventory();
+
     }
 
 

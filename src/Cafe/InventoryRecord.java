@@ -25,26 +25,33 @@ public class InventoryRecord implements Subject{
         return inventory;
     }
 
-
-    public void notifyObservers() {}
+    public void setObserver(Manager manager) {
+        this.observer = manager;
+    }
+    public void notifyObservers() { observer.orderInventory();}
 
     public void add(String product, int value) {
         this.inventory.put(product, value);
     }
 
     public void update(String type, int quantity) {
-//        System.out.println("HERE "+quantity + type);
         int newValue = inventory.get(type) - quantity;
         inventory.put(type, newValue);
         if (inventory.get(type) == 0) {
+            System.out.println("\n\nCafe is out of " + type);
             // notify manager
             notifyObservers();
         }
     }
 
+    public void fillInventory() {
+        inventory.put("Coffee", 300);
+        inventory.put("Espresso", 300);
+        inventory.put("Muffin", 100);
+        inventory.put("Banana Bread", 100);
+    }
+
     public void prettyPrint() {
-        //Map<String,String> map
-//        inventory.forEach(e -> System.out.printf("%s: %s", inventory.k));
         System.out.println("\n________Cafe Inventory________");
         for ( String key : inventory.keySet() ) {
             System.out.printf( "\n%s: %d", key, inventory.get(key) );

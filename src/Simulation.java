@@ -206,30 +206,24 @@ public class Simulation {
         return pastry;
     }
 
+    public void printCustomerOrder(String customerName, ArrayList<String> bevOrder, ArrayList<String> pastryOrder, ArrayList<String> toppings){
+        System.out.printf("\n\n###################################\n ");
+        System.out.printf(customerName + " would like ");
+        ArrayList<String> orderPrint= new ArrayList<String>();
+        orderPrint.addAll(bevOrder);
+        orderPrint.addAll(pastryOrder);
+        orderPrint.addAll(toppings);
+        orderPrint.forEach(value -> System.out.print("- "+value+" -"));
+
+    }
+
     Order order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
         ArrayList<String> bevOrder = randomBeverageOrder();
         ArrayList<String> pastryOrder = randomPastryOrder();
         ArrayList<String> toppings = randomToppingsOrder();
+        printCustomerOrder(customer.getName(), bevOrder, pastryOrder,toppings);
 
-        System.out.printf(customer.getName() + " would like ");
-//        pastryOrder.forEach(System.out::printf);
-//        toppings.forEach(System.out::printf);
-
-        Iterator bevIter = bevOrder.iterator();
-        while (bevIter.hasNext()) {
-            System.out.print(bevIter.next() + ", ");
-        }
-        Iterator pastryIter = pastryOrder.iterator();
-        while (pastryIter.hasNext()) {
-            System.out.print(pastryIter.next());
-        }
-        Iterator toppingIter = toppings.iterator();
-        while (toppingIter.hasNext()) {
-            System.out.printf(", " + toppingIter.next());
-        }
-
-
-        Order order = new Order(customer, bevOrder, pastryOrder, toppings,barista, chef);
+        Order order = new Order(customer, bevOrder, pastryOrder,toppings, barista, chef);
         cashier.takeOrder(order);
         return order;
     }
@@ -243,6 +237,7 @@ public class Simulation {
         HashMap<String, Employee> employees = employeesForTheDay(cafe.getEmployeeRecord());
         ArrayList<Customer> customers = customersForTheDay();
         for (int i = 0; i < customers.size(); i++) {
+            cafe.getInventoryRecord().setObserver((Manager) employees.get("Manager"));
             order(customers.get(i), (Cashier) employees.get("Cashier"), (Barista) employees.get("Barista"), (Chef) employees.get("Chef"));
         }
     }
@@ -275,26 +270,8 @@ public class Simulation {
         sim.setCafe(cafe);
         sim.setMenu();
 
-//        sim.daySimulation();
         sim.weeklySim();
-//        ArrayList<Customer> customersForDay = sim.customersForTheDay();
-//        for (int i = 0; i < customersForDay.size(); i++) {
-//            System.out.println(customersForDay.get(i).getName() + " is Loyal Member: " + customersForDay.get(i).isLoyal());
-//
-//        }
 
-        // cashiers take orders
-//        ArrayList<Employee> employeesForDay = sim.employeesForTheDay(cafe.getEmployeeRecord());
-//        for (int i = 0; i < employeesForDay.size(); i++) {
-//            System.out.println(employeesForDay.get(i).getName());
-//        }
-//        ArrayList<Employee> employeesForDay = sim.employeesForTheDay(cafe.getEmployeeRecord());
-//        for (int i = 0; i < employeesForDay.size(); i++) {
-//            Employee e = employeesForDay.get(i);
-//            System.out.println("###### Employee Information ######");
-//            System.out.println("Employee Name: " + e.getName());
-//            System.out.println("Employee ID: " + e.getEmployeeID());
-//        }
 
 
     }
