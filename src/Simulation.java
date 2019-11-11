@@ -223,7 +223,7 @@ public class Simulation {
         ArrayList<String> toppings = randomToppingsOrder();
         printCustomerOrder(customer.getName(), bevOrder, pastryOrder,toppings);
 
-        Order order = new Order(customer, bevOrder, pastryOrder,toppings, barista, chef);
+        Order order = new Order(customer, this.cafe, bevOrder, pastryOrder,toppings, barista, chef);
         cashier.takeOrder(order);
         return order;
     }

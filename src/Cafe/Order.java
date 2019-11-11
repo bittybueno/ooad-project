@@ -11,8 +11,69 @@ public class Order {
     private ArrayList<String> beverageOrder;
     private Barista barista;
     private Chef chef;
+    private Cafe cafe;
     private ArrayList<String> toppings;
 
+    SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
+    BeverageStore beverageStore = new BeverageStore(beverageFactory);
+
+    SimplePastryFactory pastryFactory = new SimplePastryFactory();
+    PastryStore pastryStore = new PastryStore(pastryFactory);
+
+    public Order(Customer customer, Cafe cafe, ArrayList<String> beverageOrder, ArrayList<String> kitchenOrder, ArrayList<String> toppings, Barista barista, Chef chef) {
+        this.customer = customer;
+        this.kitchenOrder = kitchenOrder;
+        this.beverageOrder = beverageOrder;
+        this.barista = barista;
+        this.chef = chef;
+        this.toppings = toppings;
+        this.cafe = cafe;
+    }
+
+    public double execute() {
+        double price = 0.0;
+        Barista barista = this.getBarista();
+        Chef chef = this.getChef();
+
+        ArrayList<Product> finishedOrder = new ArrayList<Product>();
+        if (this.getBeverageOrder().size() > 0) {
+            for (int i = 0; i < this.getBeverageOrder().size(); i++) {
+                // BEVERAGE
+                Beverage beverage = beverageStore.createBeverage(this.getBeverageOrder().get(i));
+                beverage = addToppings(this.getToppings(), beverage);
+
+                barista.prepareOrder(this.getBeverageOrder().get(i));
+
+                this.cafe.getInventoryRecord().update(this.getBeverageOrder().get(i), this.getBeverageOrder().size());
+
+                finishedOrder.add(beverage);
+                price = price + beverage.cost();
+            }
+        }
+
+        for (int i = 0; i < this.getKitchenOrder().size(); i++) {
+            // FOOD
+            String kitchenOrder = this.getKitchenOrder().get(i);
+            Pastry pastry = pastryStore.createPastry(kitchenOrder);
+
+            chef.prepareOrder(kitchenOrder);
+            this.cafe.getInventoryRecord().update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
+
+            finishedOrder.add(pastry);
+            price = price + pastry.cost();
+        }
+        return price;
+    }
+
+    public Beverage addToppings(ArrayList<String> toppings, Beverage beverage) {
+        Beverage modifiedBeverage = null;
+        for (int i = 0; i < toppings.size(); i++) {
+            if (toppings.get(i) == "Whip Cream") {
+                modifiedBeverage = new WhipCream(beverage);
+            }
+        }
+        return modifiedBeverage;
+    }
 
     public Barista getBarista() { return barista; }
 
@@ -31,16 +92,6 @@ public class Order {
     }
 
     public ArrayList<String> getToppings() { return toppings; }
-
-
-    public Order(Customer customer, ArrayList<String> beverageOrder, ArrayList<String> kitchenOrder, ArrayList<String> toppings, Barista barista, Chef chef) {
-        this.customer = customer;
-        this.kitchenOrder = kitchenOrder;
-        this.beverageOrder = beverageOrder;
-        this.barista = barista;
-        this.chef = chef;
-        this.toppings = toppings;
-    }
 
     public void prettyPrint() {
         System.out.println("\nBeverage Order: ");

@@ -18,37 +18,39 @@ public class Cashier extends Employee{
     }
 
     public void takeOrder(Order order) {
-        double price = 0.0;
-        Barista barista = order.getBarista();
-        Chef chef = order.getChef();
+//        double price = 0.0;
+        double price = order.execute();
 
-        ArrayList<Product> finishedOrder = new ArrayList<Product>();
-        if (order.getBeverageOrder().size() > 0) {
-            for (int i = 0; i < order.getBeverageOrder().size(); i++) {
-                // BEVERAGE
-                Beverage beverage = beverageStore.createBeverage(order.getBeverageOrder().get(i));
-                beverage = addToppings(order.getToppings(), beverage);
-
-                barista.prepareOrder(order.getBeverageOrder().get(i));
-
-                getCafe().getInventoryRecord().update(order.getBeverageOrder().get(i), order.getBeverageOrder().size());
-
-                finishedOrder.add(beverage);
-                price = price + beverage.cost();
-            }
-        }
-
-        for (int i = 0; i < order.getKitchenOrder().size(); i++) {
-            // FOOD
-            String kitchenOrder = order.getKitchenOrder().get(i);
-            Pastry pastry = pastryStore.createPastry(kitchenOrder);
-
-            chef.prepareOrder(kitchenOrder);
-            getCafe().getInventoryRecord().update(order.getKitchenOrder().get(i), order.getKitchenOrder().size());
-
-            finishedOrder.add(pastry);
-            price = price + pastry.cost();
-        }
+//        Barista barista = order.getBarista();
+//        Chef chef = order.getChef();
+//
+//        ArrayList<Product> finishedOrder = new ArrayList<Product>();
+//        if (order.getBeverageOrder().size() > 0) {
+//            for (int i = 0; i < order.getBeverageOrder().size(); i++) {
+//                // BEVERAGE
+//                Beverage beverage = beverageStore.createBeverage(order.getBeverageOrder().get(i));
+//                beverage = addToppings(order.getToppings(), beverage);
+//
+//                barista.prepareOrder(order.getBeverageOrder().get(i));
+//
+//                getCafe().getInventoryRecord().update(order.getBeverageOrder().get(i), order.getBeverageOrder().size());
+//
+//                finishedOrder.add(beverage);
+//                price = price + beverage.cost();
+//            }
+//        }
+//
+//        for (int i = 0; i < order.getKitchenOrder().size(); i++) {
+//            // FOOD
+//            String kitchenOrder = order.getKitchenOrder().get(i);
+//            Pastry pastry = pastryStore.createPastry(kitchenOrder);
+//
+//            chef.prepareOrder(kitchenOrder);
+//            getCafe().getInventoryRecord().update(order.getKitchenOrder().get(i), order.getKitchenOrder().size());
+//
+//            finishedOrder.add(pastry);
+//            price = price + pastry.cost();
+//        }
 
         double priceBeforeRewards = price;
         if (isRewardsCustomer(order)) {
