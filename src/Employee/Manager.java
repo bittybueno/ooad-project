@@ -1,6 +1,8 @@
 package Employee;
 import Cafe.*;
 
+// SINGLETON & OBSERVER DESIGN PATTERN
+
 public class Manager extends Employee {
 
     private static Manager manager;
@@ -23,7 +25,6 @@ public class Manager extends Employee {
     public void orderInventory() {
         System.out.println(manager.getName() + " is filling the inventory\n\n");
         this.getCafe().getInventoryRecord().fillInventory();
-
     }
 
 

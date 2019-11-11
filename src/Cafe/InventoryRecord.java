@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InventoryRecord implements Subject{
+// OBSERVER DESIGN PATTERN
+
+public class InventoryRecord implements Subject {
     private String type;
     private Map<String, Integer> inventory;
     private Manager observer;
@@ -58,5 +60,4 @@ public class InventoryRecord implements Subject{
         }
         System.out.println("\n______________________________\n");
     }
-    public void get() {}
 }

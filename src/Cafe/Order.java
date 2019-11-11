@@ -4,6 +4,8 @@ import Product.*;
 import Employee.*;
 import java.util.ArrayList;
 
+// COMMAND DESIGN PATTERN
+
 public class Order implements Command{
 
     private Customer customer;
