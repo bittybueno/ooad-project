@@ -16,11 +16,6 @@ public class SalesRecord {
 
     }
 
-    public ArrayList<Reciept> getCustomerRecord() {
-        return sales;
-    }
-
-
     public void add(Reciept r) { this.sales.add(r);}
     public void update() {}
     public void get() {}

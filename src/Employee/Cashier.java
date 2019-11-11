@@ -4,58 +4,49 @@ import Cafe.*;
 import Customer.Customer;
 import Product.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Cashier extends Employee{
-    SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
-    BeverageStore beverageStore = new BeverageStore(beverageFactory);
-
-    SimplePastryFactory pastryFactory = new SimplePastryFactory();
-    PastryStore pastryStore = new PastryStore(pastryFactory);
-
-
     public Cashier(String firstName, String lastName, int employeeID, Cafe cafe) {
         super(firstName, lastName,17, employeeID, cafe);
     }
 
+    /**
+     * Cashier takes order. Invokes the order (COMMAND) with orderUp(order).
+     * Cashier calculates the price of the order. Cashier updates records
+     * by running transaction
+     */
     public void takeOrder(Order order) {
-//        double price = 0.0;
-        double price = order.execute();
         Barista barista = order.getBarista();
         Chef chef = order.getChef();
+        SalesRecord salesRecord = getCafe().getSalesRecord();
+        double priceBeforeRewards;
+        double price;
 
-        // BARISTA
+        // set and invoke commands on receivers
         barista.orderUp(order);
+        chef.orderUp(order);
 
+        // calculate price of order
+        priceBeforeRewards = calculatePrice(order).get("priceBefore");
+        price = calculatePrice(order).get("priceAfter");
 
+        // add transaction to sales record
+        Reciept reciept = new Reciept(order.getCustomer(), order, price, priceBeforeRewards - price);
+        salesRecord.add(reciept);
 
-//
-//        ArrayList<Product> finishedOrder = new ArrayList<Product>();
-//        if (order.getBeverageOrder().size() > 0) {
-//            for (int i = 0; i < order.getBeverageOrder().size(); i++) {
-//                // BEVERAGE
-//                Beverage beverage = beverageStore.createBeverage(order.getBeverageOrder().get(i));
-//                beverage = addToppings(order.getToppings(), beverage);
-//
-//                barista.prepareOrder(order.getBeverageOrder().get(i));
-//
-//                getCafe().getInventoryRecord().update(order.getBeverageOrder().get(i), order.getBeverageOrder().size());
-//
-//                finishedOrder.add(beverage);
-//                price = price + beverage.cost();
-//            }
-//        }
-//
-//        for (int i = 0; i < order.getKitchenOrder().size(); i++) {
-//            // FOOD
-//            String kitchenOrder = order.getKitchenOrder().get(i);
-//            Pastry pastry = pastryStore.createPastry(kitchenOrder);
-//
-//            chef.prepareOrder(kitchenOrder);
-//            getCafe().getInventoryRecord().update(order.getKitchenOrder().get(i), order.getKitchenOrder().size());
-//
-//            finishedOrder.add(pastry);
-//            price = price + pastry.cost();
-//        }
+        // display receipt
+        reciept.prettyPrint();
+    }
+
+    /**
+     * Calculate the cost of the order. Handles rewards if applicable.
+     */
+    public HashMap<String, Double> calculatePrice(Order order) {
+        HashMap<String, Double> ret = new HashMap<String, Double>();
+        double price = order.getPrice();
+
+        ret.put("priceBefore", price);
 
         double priceBeforeRewards = price;
         if (isRewardsCustomer(order)) {
@@ -67,35 +58,19 @@ public class Cashier extends Employee{
                 price = applyRewards(price);
             }
         }
-
-        // add transaction to sales record
-        Reciept reciept = new Reciept(order.getCustomer(), order, price, priceBeforeRewards - price);
-        reciept.prettyPrint();
-        getCafe().getSalesRecord().add(reciept);
-
-
-
-
-        // update sales record
-        this.getCafe().getSalesRecord().add(reciept);
-        orderUp();
+        ret.put("priceAfter", price);
+        return ret;
     }
 
-    public Beverage addToppings(ArrayList<String> toppings, Beverage beverage) {
-        Beverage modifiedBeverage = null;
-        for (int i = 0; i < toppings.size(); i++) {
-            if (toppings.get(i) == "Whip Cream") {
-                modifiedBeverage = new WhipCream(beverage);
-            }
-        }
-        return modifiedBeverage;
-    }
 
     boolean isRewardsCustomer(Order order) {
         return order.getCustomer().isLoyal();
     }
 
 
+    /**
+     * TODO
+     */
     public boolean askToSignUp() {
         if(new java.util.Random().nextInt(8)==0){
             return true;
@@ -110,16 +85,10 @@ public class Cashier extends Employee{
         customer.setLoyal(true);
     }
 
+    /**
+     * TODO
+     */
     double applyRewards(double price) {
         return price - 1.50;
-    }
-
-    void orderUp() {
-        System.out.println("Order Up!");
-    }
-
-    void finishTransaction() {
-        // params: Order: order
-        // maybe return a reciept?
     }
 }

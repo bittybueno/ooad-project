@@ -15,6 +15,7 @@ public class Order implements Command{
     private Chef chef;
     private Cafe cafe;
     private ArrayList<String> toppings;
+    private double price;
 
     SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
     BeverageStore beverageStore = new BeverageStore(beverageFactory);
@@ -32,37 +33,53 @@ public class Order implements Command{
         this.cafe = cafe;
     }
 
-    public double execute() {
+    public void execute() {
         double price = 0.0;
         Barista barista = this.getBarista();
         Chef chef = this.getChef();
+        InventoryRecord inventoryRecord = this.cafe.getInventoryRecord();
 
         if (this.getBeverageOrder().size() > 0) {
+            // loop through beverage order, create beverage, set associated costs
             for (int i = 0; i < this.getBeverageOrder().size(); i++) {
-                // BEVERAGE
+                // create beverage
                 Beverage beverage = beverageStore.createBeverage(this.getBeverageOrder().get(i));
-                beverage = addToppings(this.getToppings(), beverage);
+                beverage = addToppings(toppings, beverage);
 
+                // announce beverage is being prepared
                 barista.announce(this.getBeverageOrder().get(i));
-                this.cafe.getInventoryRecord().update(this.getBeverageOrder().get(i), this.getBeverageOrder().size());
 
+                // update inventory
+                inventoryRecord.update(this.getBeverageOrder().get(i), this.getBeverageOrder().size());
+
+                // add cost of making the beverage
                 price += beverage.cost();
             }
         }
 
+        // loop through food order, create beverage, set associated costs
         for (int i = 0; i < this.getKitchenOrder().size(); i++) {
-            // FOOD
+            // create pastry
             String kitchenOrder = this.getKitchenOrder().get(i);
             Pastry pastry = pastryStore.createPastry(kitchenOrder);
 
+            // announce pastry is being prepared
             chef.announce(kitchenOrder);
-            this.cafe.getInventoryRecord().update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
 
+            // update inventory
+            inventoryRecord.update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
+
+            // add cost of making the pastry
             price += pastry.cost();
         }
-        return price;
+
+        // set total cost of making the order
+        this.price = price;
     }
 
+    /**
+     * Decorator
+     */
     public Beverage addToppings(ArrayList<String> toppings, Beverage beverage) {
         Beverage modifiedBeverage = null;
         for (int i = 0; i < toppings.size(); i++) {
@@ -73,23 +90,20 @@ public class Order implements Command{
         return modifiedBeverage;
     }
 
+    public double getPrice() {
+        return price;
+    }
     public Barista getBarista() { return barista; }
-
     public Chef getChef() { return chef; }
-
     public Customer getCustomer() {
         return customer;
     }
-
     public ArrayList<String> getKitchenOrder() {
         return kitchenOrder;
     }
-
     public ArrayList<String> getBeverageOrder() {
         return beverageOrder;
     }
-
-    public ArrayList<String> getToppings() { return toppings; }
 
     public void prettyPrint() {
         System.out.println("\nBeverage Order: ");

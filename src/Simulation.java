@@ -163,7 +163,7 @@ public class Simulation {
 
     }
 
-    public ArrayList<String> randomBeverageOrder() {
+    ArrayList<String> randomBeverageOrder() {
         ArrayList<String> beverage = new ArrayList<String>();
         int numOfBevs =  1 + (int)(Math.random() * ((3 - 1) + 1));
 
@@ -177,7 +177,7 @@ public class Simulation {
         return beverage;
     }
 
-    public ArrayList<String> randomToppingsOrder() {
+    ArrayList<String> randomToppingsOrder() {
 //        int numOfToppings = 1 + (int)(Math.random() * ((3 - 1) + 1));
 //        int i = 0;
         ArrayList<String> toppings = new ArrayList<String>();
@@ -206,6 +206,9 @@ public class Simulation {
         return pastry;
     }
 
+    /**
+     * For visualizing the simulation
+     */
     public void printCustomerOrder(String customerName, ArrayList<String> bevOrder, ArrayList<String> pastryOrder, ArrayList<String> toppings){
         System.out.printf("\n\n###################################\n ");
         System.out.printf(customerName + " would like ");
@@ -217,6 +220,10 @@ public class Simulation {
 
     }
 
+    /**
+     * Customer in simulation makes a random order based on the
+     * menu for the simulation
+     */
     Order order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
         ArrayList<String> bevOrder = randomBeverageOrder();
         ArrayList<String> pastryOrder = randomPastryOrder();
@@ -244,6 +251,9 @@ public class Simulation {
 
     public void setCafe(Cafe cafe) {this.cafe = cafe;}
 
+    /**
+     * Run simulation for a week
+     */
     public void weeklySim(){
         cafe.getInventoryRecord().prettyPrint();
         for (int i = 0; i < 8; i++) {
@@ -258,18 +268,22 @@ public class Simulation {
     public static void main(String[] args) {
         Simulation sim = new Simulation();
 
+        // setting up cafe simulation
         SalesRecord sales = sim.createSalesRecord();
         CustomerRecord customers = sim.createCustomerRecord();
         InventoryRecord inventory = sim.createInventory();
 
         Cafe cafe = new Cafe(sales, inventory, customers);
 
+        // employees need to know which store they work at
         EmployeeRecord employees = sim.createEmployees(cafe);
         cafe.setEmployeeRecord(employees);
 
+        // setting up variables for simulation
         sim.setCafe(cafe);
         sim.setMenu();
 
+        // run simulation for a week
         sim.weeklySim();
 
 
