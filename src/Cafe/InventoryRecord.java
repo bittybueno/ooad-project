@@ -14,8 +14,10 @@ public class InventoryRecord implements Subject {
     private String type;
     private Map<String, Integer> inventory;
     private Manager observer;
+    private Cafe cafe;
 
-    public InventoryRecord() {
+    public InventoryRecord(Cafe cafe) {
+        this.cafe = cafe;
         this.type = "Inventory";
 
         Map<String, Integer> inventory = new HashMap<String, Integer>();
@@ -37,6 +39,7 @@ public class InventoryRecord implements Subject {
     }
 
     public void update(String type, int quantity) {
+        Map<String, Integer> inventory = cafe.getInventoryRecord().inventory;
         int newValue = inventory.get(type) - quantity;
         inventory.put(type, newValue);
         if (inventory.get(type) == 0) {

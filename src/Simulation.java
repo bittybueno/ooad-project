@@ -21,44 +21,6 @@ public class Simulation {
         this.min = 0;
     }
 
-    public void setMenu() {
-        ArrayList<String> beverageMenu = new ArrayList<>();
-        beverageMenu.add("Coffee");
-        beverageMenu.add("Espresso");
-
-        ArrayList<String> pastryMenu = new ArrayList<>();
-        pastryMenu.add("Muffin");
-        pastryMenu.add("Banana Bread");
-
-        ArrayList<String> toppingsMenu = new ArrayList<>();
-        toppingsMenu.add("Whip Cream");
-
-        this.toppingsMenu = toppingsMenu;
-        this.beverageMenu = beverageMenu;
-        this.pastryMenu = pastryMenu;
-    }
-
-    EmployeeRecord createEmployees(Cafe cafe){
-        EmployeeRecord employeeRecord = new EmployeeRecord();
-        employeeRecord.add(Manager.getInstance(cafe));
-
-        // BARISTA
-        employeeRecord.add(new Barista("David", "Baker", 2, cafe));
-
-        //CASHIER
-        employeeRecord.add(new Cashier("Katie", "Andrews", 4, cafe));
-
-        //CHEF
-        employeeRecord.add(new Chef("Bobby", "Day", 7, cafe));
-
-        return employeeRecord;
-    }
-
-    SalesRecord createSalesRecord(){
-        SalesRecord salesRecord = new SalesRecord();
-        return salesRecord;
-    }
-
     CustomerRecord createCustomerRecord(){
         CustomerRecord customerRecord = new CustomerRecord();
         customerRecord.add(new Customer("David", true));
@@ -71,19 +33,6 @@ public class Simulation {
         this.loyalCustomersRecord = customerRecord;
 
         return customerRecord;
-    }
-
-    InventoryRecord createInventory(){
-        InventoryRecord inventory = new InventoryRecord();
-
-        inventory.add("Coffee", 300);
-        inventory.add("Espresso", 300);
-        inventory.add("Muffin", 100);
-        inventory.add("Banana Bread", 100);
-
-
-
-        return inventory;
     }
 
     void createNewCustomers() {
@@ -169,8 +118,8 @@ public class Simulation {
 
         int i = 0;
         while (i < numOfBevs) {
-            int index = ((int)(Math.random() * beverageMenu.size() + 1)) - 1;
-            beverage.add(beverageMenu.get(index));
+            int index = ((int)(Math.random() * this.cafe.getBeverageMenu().size() + 1)) - 1;
+            beverage.add(this.cafe.getBeverageMenu().get(index));
             i++;
         }
 
@@ -178,28 +127,28 @@ public class Simulation {
     }
 
     ArrayList<String> randomToppingsOrder() {
-//        int numOfToppings = 1 + (int)(Math.random() * ((3 - 1) + 1));
-//        int i = 0;
         ArrayList<String> toppings = new ArrayList<String>();
-        toppings.add("Whip Cream");
-//        Collections.shuffle(this.toppingsMenu);
-//        while (i < numOfToppings) {
-//            toppings.add(this.toppingsMenu.get(i));
-//            i++;
-//        }
+        int numOfToppings =  1 + (int)(Math.random() * ((2 - 1) + 1));
+
+        int i = 0;
+        while (i < numOfToppings) {
+            int index = ((int)(Math.random() * cafe.getToppingsMenu().size() + 1)) - 1;
+            toppings.add(cafe.getToppingsMenu().get(index));
+            i++;
+        }
 
         return toppings;
     }
 
-    public ArrayList<String> randomPastryOrder() {
+    ArrayList<String> randomPastryOrder() {
 
         ArrayList<String> pastry = new ArrayList<String>();
         int numOfPastries =  1 + (int)(Math.random() * ((2 - 1) + 1));
 
         int i = 0;
         while (i < numOfPastries) {
-            int index = ((int)(Math.random() * pastryMenu.size() + 1)) - 1;
-            pastry.add(pastryMenu.get(index));
+            int index = ((int)(Math.random() * this.cafe.getPastryMenu().size() + 1)) - 1;
+            pastry.add(this.cafe.getPastryMenu().get(index));
             i++;
         }
 
@@ -228,8 +177,8 @@ public class Simulation {
         ArrayList<String> bevOrder = randomBeverageOrder();
         ArrayList<String> pastryOrder = randomPastryOrder();
         ArrayList<String> toppings = randomToppingsOrder();
-        printCustomerOrder(customer.getName(), bevOrder, pastryOrder,toppings);
 
+        printCustomerOrder(customer.getName(), bevOrder, pastryOrder,toppings);
         Order order = new Order(customer, this.cafe, bevOrder, pastryOrder,toppings, barista, chef);
         cashier.takeOrder(order);
         return order;
@@ -269,24 +218,14 @@ public class Simulation {
         Simulation sim = new Simulation();
 
         // setting up cafe simulation
-        SalesRecord sales = sim.createSalesRecord();
         CustomerRecord customers = sim.createCustomerRecord();
-        InventoryRecord inventory = sim.createInventory();
 
-        Cafe cafe = new Cafe(sales, inventory, customers);
-
-        // employees need to know which store they work at
-        EmployeeRecord employees = sim.createEmployees(cafe);
-        cafe.setEmployeeRecord(employees);
+        Cafe cafe = new Cafe(customers);
 
         // setting up variables for simulation
         sim.setCafe(cafe);
-        sim.setMenu();
-
-        // run simulation for a week
+//
+//        // run simulation for a week
         sim.weeklySim();
-
-
-
     }
 }

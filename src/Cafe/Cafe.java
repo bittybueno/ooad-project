@@ -1,8 +1,12 @@
 package Cafe;
 
-import Employee.Employee;
+import Employee.*;
 
-import java.security.PublicKey;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.File;
+import java.util.ArrayList;
 
 public class Cafe {
 
@@ -11,27 +15,142 @@ public class Cafe {
     private EmployeeRecord employeeRecord;
     private CustomerRecord customerRecord;
 
+    private ArrayList<String> beverageMenu;
+    private ArrayList<String> pastryMenu;
+    private ArrayList<String> toppingsMenu;
 
-    public Cafe(SalesRecord salesRecord, InventoryRecord inventoryRecord, CustomerRecord customerRecord) {
+    private String inputEmployees;
+
+    public Cafe(CustomerRecord customerRecord) {
         this.customerRecord = customerRecord;
-        this.salesRecord = salesRecord;
-        this.inventoryRecord = inventoryRecord;
-//        this.employeeRecord = employeeRecord;
+        this.salesRecord = new SalesRecord();
+        this.inventoryRecord = createInventoryFromInput();
+
+        ArrayList<String> beverageMenu = new ArrayList<>();
+        this.beverageMenu = beverageMenu;
+        ArrayList<String> pastryMenu = new ArrayList<>();
+        this.pastryMenu = pastryMenu;
+        ArrayList<String> toppingsMenu = new ArrayList<>();
+        this.toppingsMenu = toppingsMenu;
+
+        createEmployees();
+        setBevMenu();
+        setPastryMenu();
+        setToppingsMenu();
+        createInventoryFromInput();
     }
 
-    public EmployeeRecord getEmployeeRecord() {
+    void setBevMenu() {
+        File filename = new File("simulationBevMenu.txt");
+        try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
+
+            String line;
+
+            while ((line = inputFile.readLine()) != null) {
+                this.beverageMenu.add(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void setToppingsMenu() {
+        File filename = new File("simulationToppingsMenu.txt");
+        try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
+
+            String line;
+
+            while ((line = inputFile.readLine()) != null) {
+                this.toppingsMenu.add(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void setPastryMenu() {
+        File filename = new File("simulationPastryMenu.txt");
+        try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
+
+            String line;
+
+            while ((line = inputFile.readLine()) != null) {
+                this.pastryMenu.add(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void createEmployees(){
+        EmployeeRecord employeeRecord = new EmployeeRecord();
+        employeeRecord.add(Manager.getInstance(this));
+        this.employeeRecord = setEmployeesFromInput();
+
+    }
+
+    EmployeeRecord setEmployeesFromInput() {
+        EmployeeRecord employeeRecord = new EmployeeRecord();
+//        System.out.println(this.inputEmployees);
+        File filename = new File("simulationEmployees.txt");
+
+        try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
+
+            String line;
+
+            while ((line = inputFile.readLine()) != null) {
+                String[] splited = line.split("\\s+");
+                if (splited[0].equals("Barista")) {
+                    employeeRecord.add(new Barista(splited[1], splited[2], Integer.parseInt(splited[3]), this));
+                }
+                if (splited[0].equals("Cashier")) {
+                    employeeRecord.add(new Cashier(splited[1], splited[2], Integer.parseInt(splited[3]), this));
+                }
+                if (splited[0].equals("Chef")) {
+                    employeeRecord.add(new Chef(splited[1], splited[2], Integer.parseInt(splited[3]), this));
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return employeeRecord;
     }
+    InventoryRecord createInventoryFromInput(){
+        InventoryRecord inventory = new InventoryRecord(this);
+        File filename = new File("simulationInventory.txt");
+        try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
-    public void setEmployeeRecord(EmployeeRecord employeeRecord) {
-        this.employeeRecord = employeeRecord;
+            String line;
+
+            while ((line = inputFile.readLine()) != null) {
+                String[] splited = line.split(":");
+                inventory.add(splited[0], Integer.parseInt(splited[1]));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return inventory;
     }
 
-    public SalesRecord getSalesRecord() {
-        return salesRecord;
-    }
+    public void setInputEmployees(String inputEmployees) { this.inputEmployees = inputEmployees; }
 
-    public InventoryRecord getInventoryRecord() {
-        return inventoryRecord;
-    }
+    public ArrayList<String> getBeverageMenu() {return this.beverageMenu;}
+
+    public ArrayList<String> getPastryMenu() {return this.pastryMenu;}
+
+    public ArrayList<String> getToppingsMenu() {return this.toppingsMenu;}
+
+    public EmployeeRecord getEmployeeRecord() { return employeeRecord; }
+
+    public void setEmployeeRecord(EmployeeRecord employeeRecord) { this.employeeRecord = employeeRecord; }
+
+    public SalesRecord getSalesRecord() { return salesRecord; }
+
+    public InventoryRecord getInventoryRecord() { return inventoryRecord; }
+
 }

@@ -44,7 +44,7 @@ public class Order implements Command{
             for (int i = 0; i < this.getBeverageOrder().size(); i++) {
                 // create beverage
                 Beverage beverage = beverageStore.createBeverage(this.getBeverageOrder().get(i));
-                beverage = addToppings(toppings, beverage);
+                beverage = addToppings(this.toppings, beverage);
 
                 // announce beverage is being prepared
                 barista.announce(this.getBeverageOrder().get(i));
@@ -83,8 +83,11 @@ public class Order implements Command{
     public Beverage addToppings(ArrayList<String> toppings, Beverage beverage) {
         Beverage modifiedBeverage = null;
         for (int i = 0; i < toppings.size(); i++) {
-            if (toppings.get(i) == "Whip Cream") {
+            if (toppings.get(i).equals("Whip Cream")) {
                 modifiedBeverage = new WhipCream(beverage);
+            }
+            if (toppings.get(i).equals("Extra Shot")) {
+                modifiedBeverage = new ExtraShot(beverage);
             }
         }
         return modifiedBeverage;
