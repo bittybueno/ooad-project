@@ -19,8 +19,6 @@ public class Cafe {
     private ArrayList<String> pastryMenu;
     private ArrayList<String> toppingsMenu;
 
-    private String inputEmployees;
-
     public Cafe(CustomerRecord customerRecord) {
         this.customerRecord = customerRecord;
         this.salesRecord = new SalesRecord();
@@ -85,6 +83,8 @@ public class Cafe {
         }
     }
 
+
+
     void createEmployees(){
         EmployeeRecord employeeRecord = new EmployeeRecord();
         employeeRecord.add(Manager.getInstance(this));
@@ -119,6 +119,7 @@ public class Cafe {
         }
         return employeeRecord;
     }
+
     InventoryRecord createInventoryFromInput(){
         InventoryRecord inventory = new InventoryRecord(this);
         File filename = new File("simulationInventory.txt");
@@ -137,7 +138,7 @@ public class Cafe {
         return inventory;
     }
 
-    public void setInputEmployees(String inputEmployees) { this.inputEmployees = inputEmployees; }
+
 
     public ArrayList<String> getBeverageMenu() {return this.beverageMenu;}
 
@@ -146,8 +147,6 @@ public class Cafe {
     public ArrayList<String> getToppingsMenu() {return this.toppingsMenu;}
 
     public EmployeeRecord getEmployeeRecord() { return employeeRecord; }
-
-    public void setEmployeeRecord(EmployeeRecord employeeRecord) { this.employeeRecord = employeeRecord; }
 
     public SalesRecord getSalesRecord() { return salesRecord; }
 

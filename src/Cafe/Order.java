@@ -96,14 +96,19 @@ public class Order implements Command{
     public double getPrice() {
         return price;
     }
+
     public Barista getBarista() { return barista; }
+
     public Chef getChef() { return chef; }
+
     public Customer getCustomer() {
         return customer;
     }
+
     public ArrayList<String> getKitchenOrder() {
         return kitchenOrder;
     }
+
     public ArrayList<String> getBeverageOrder() {
         return beverageOrder;
     }

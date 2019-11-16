@@ -1,10 +1,6 @@
 package Cafe;
 
 import Employee.Manager;
-import Employee.Observer;
-import Product.Product;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,13 +21,10 @@ public class InventoryRecord implements Subject {
 
     }
 
-    public Map<String, Integer> getInventoryRecordRecord() {
-        return inventory;
-    }
-
     public void setObserver(Manager manager) {
         this.observer = manager;
     }
+
     public void notifyObservers() { observer.orderInventory();}
 
     public void add(String product, int value) {
@@ -53,7 +46,7 @@ public class InventoryRecord implements Subject {
         inventory.put("Coffee", 300);
         inventory.put("Espresso", 300);
         inventory.put("Muffin", 100);
-        inventory.put("Banana Bread", 100);
+        inventory.put("BananaBread", 100);
     }
 
     public void prettyPrint() {

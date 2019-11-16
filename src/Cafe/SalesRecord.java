@@ -1,7 +1,5 @@
 package Cafe;
 
-import Customer.Customer;
-
 import java.util.ArrayList;
 
 public class SalesRecord {
@@ -17,6 +15,5 @@ public class SalesRecord {
     }
 
     public void add(Reciept r) { this.sales.add(r);}
-    public void update() {}
-    public void get() {}
+
 }

@@ -9,9 +9,6 @@ public class Simulation {
     public ArrayList<Customer> newCustomers;
     public CustomerRecord loyalCustomersRecord;
     public Cafe cafe;
-    ArrayList<String> beverageMenu;
-    ArrayList<String> pastryMenu;
-    ArrayList<String> toppingsMenu;
     public int maxLoyal;
     public int min;
 
@@ -197,9 +194,6 @@ public class Simulation {
             order(customers.get(i), (Cashier) employees.get("Cashier"), (Barista) employees.get("Barista"), (Chef) employees.get("Chef"));
         }
     }
-
-    public void setCafe(Cafe cafe) {this.cafe = cafe;}
-
     /**
      * Run simulation for a week
      */
@@ -211,6 +205,9 @@ public class Simulation {
         }
         cafe.getInventoryRecord().prettyPrint();
     }
+
+    public void setCafe(Cafe cafe) {this.cafe = cafe;}
+
 
 
 

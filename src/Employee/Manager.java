@@ -14,8 +14,7 @@ public class Manager extends Employee {
         super(firstName, lastName,35, employeeID, cafe);
     }
 
-    public static Manager getInstance(Cafe cafe)
-    {
+    public static Manager getInstance(Cafe cafe) {
         if (manager==null) {
             manager = new Manager("Jeffery", "Diaz", 1, cafe);
         }

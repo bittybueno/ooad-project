@@ -3,10 +3,12 @@ package Customer;
 public class Customer {
     private String name;
     private boolean loyal;
+    private int loyaltyPoints;
 
     public Customer(String name, Boolean bool) {
         this.name = name;
         this.loyal = bool;
+        this.loyaltyPoints = 0;
     }
 
     public boolean isLoyal() {
@@ -21,6 +23,7 @@ public class Customer {
         return name;
     }
 
-    void addPoints(){}
-    void applyRewards(){}
+    public int getLoyaltyPoints() { return this.loyaltyPoints;}
+
+    public void setLoyaltyPoints(double newPoints ) {this.loyaltyPoints += newPoints;}
 }

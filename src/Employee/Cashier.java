@@ -2,8 +2,6 @@ package Employee;
 
 import Cafe.*;
 import Customer.Customer;
-import Product.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Cashier extends Employee{
@@ -44,29 +42,28 @@ public class Cashier extends Employee{
      */
     public HashMap<String, Double> calculatePrice(Order order) {
         HashMap<String, Double> ret = new HashMap<String, Double>();
+        Customer customer = order.getCustomer();
         double price = order.getPrice();
 
         ret.put("priceBefore", price);
 
-        double priceBeforeRewards = price;
         if (isRewardsCustomer(order)) {
-            price = applyRewards(price);
+            price = applyRewards(price, customer);
         } else
         {
             if (askToSignUp()) {
-                addNewLoyal(order.getCustomer());
-                price = applyRewards(price);
+                System.out.println("New Loyal Member!");
+                addNewLoyal(customer);
+                price = applyRewards(price, customer);
             }
         }
         ret.put("priceAfter", price);
         return ret;
     }
 
-
     boolean isRewardsCustomer(Order order) {
         return order.getCustomer().isLoyal();
     }
-
 
     /**
      * TODO
@@ -88,7 +85,13 @@ public class Cashier extends Employee{
     /**
      * TODO
      */
-    double applyRewards(double price) {
-        return price - 1.50;
+    double applyRewards(double price, Customer customer) {
+        customer.setLoyaltyPoints(price);
+
+        if (customer.getLoyaltyPoints() > 50) {
+            return price - 5.00;
+        }
+
+        return price;
     }
 }
