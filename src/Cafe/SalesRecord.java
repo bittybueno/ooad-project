@@ -15,5 +15,4 @@ public class SalesRecord {
     }
 
     public void add(Reciept r) { this.sales.add(r);}
-
 }

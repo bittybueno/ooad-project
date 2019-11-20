@@ -1,7 +1,6 @@
 import Cafe.*;
 import Employee.*;
 import Customer.*;
-import Product.*;
 
 import java.util.*;
 
@@ -20,12 +19,12 @@ public class Simulation {
 
     CustomerRecord createCustomerRecord(){
         CustomerRecord customerRecord = new CustomerRecord();
-        customerRecord.add(new Customer("David", true));
-        customerRecord.add(new Customer("Jozi", true));
-        customerRecord.add(new Customer("Terri", true));
-        customerRecord.add(new Customer("Colby", true));
-        customerRecord.add(new Customer("Parker", true));
-        customerRecord.add(new Customer("Hodge", true));
+        customerRecord.add(new Customer("David"));
+        customerRecord.add(new Customer("Jozi"));
+        customerRecord.add(new Customer("Terri"));
+        customerRecord.add(new Customer("Colby"));
+        customerRecord.add(new Customer("Parker"));
+        customerRecord.add(new Customer("Hodge"));
 
         this.loyalCustomersRecord = customerRecord;
 
@@ -34,9 +33,9 @@ public class Simulation {
 
     void createNewCustomers() {
         ArrayList<Customer> newCustomers = new ArrayList<Customer>();
-        newCustomers.add(new Customer("Eric", false));
-        newCustomers.add(new Customer("Rei", false));
-        newCustomers.add(new Customer("Connie", false));
+        newCustomers.add(new Customer("Eric"));
+        newCustomers.add(new Customer("Rei"));
+        newCustomers.add(new Customer("Connie"));
         this.newCustomers = newCustomers;
     }
 
@@ -217,11 +216,11 @@ public class Simulation {
         // setting up cafe simulation
         CustomerRecord customers = sim.createCustomerRecord();
 
-        Cafe cafe = new Cafe(customers);
+        Cafe cafe = new Cafe();
 
         // setting up variables for simulation
         sim.setCafe(cafe);
-//
+
 //        // run simulation for a week
         sim.weeklySim();
     }

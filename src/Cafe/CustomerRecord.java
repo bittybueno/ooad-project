@@ -23,6 +23,8 @@ public class CustomerRecord {
 
 
     public void add(Customer c) { this.customers.add(c); }
-    public void update() {}
-    public void get() {}
+    public void isLoyal() {
+
+    }
+
 }

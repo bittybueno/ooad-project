@@ -33,18 +33,24 @@ public class Order implements Command{
         this.cafe = cafe;
     }
 
+    public Cafe getCafe() {
+        return cafe;
+    }
+
     public void execute() {
         double price = 0.0;
         Barista barista = this.getBarista();
         Chef chef = this.getChef();
         InventoryRecord inventoryRecord = this.cafe.getInventoryRecord();
 
-        if (this.getBeverageOrder().size() > 0) {
+        if (!this.getBeverageOrder().isEmpty()) {
             // loop through beverage order, create beverage, set associated costs
             for (int i = 0; i < this.getBeverageOrder().size(); i++) {
                 // create beverage
                 Beverage beverage = beverageStore.createBeverage(this.getBeverageOrder().get(i));
-                beverage = addToppings(this.toppings, beverage);
+                if (!this.toppings.isEmpty()) {
+                    beverage = addToppings(this.toppings, beverage);
+                }
 
                 // announce beverage is being prepared
                 barista.announce(this.getBeverageOrder().get(i));
@@ -57,20 +63,22 @@ public class Order implements Command{
             }
         }
 
-        // loop through food order, create beverage, set associated costs
-        for (int i = 0; i < this.getKitchenOrder().size(); i++) {
-            // create pastry
-            String kitchenOrder = this.getKitchenOrder().get(i);
-            Pastry pastry = pastryStore.createPastry(kitchenOrder);
+        if (!this.getKitchenOrder().isEmpty()) {
+            // loop through food order, create beverage, set associated costs
+            for (int i = 0; i < this.getKitchenOrder().size(); i++) {
+                // create pastry
+                String kitchenOrder = this.getKitchenOrder().get(i);
+                Pastry pastry = pastryStore.createPastry(kitchenOrder);
 
-            // announce pastry is being prepared
-            chef.announce(kitchenOrder);
+                // announce pastry is being prepared
+                chef.announce(kitchenOrder);
 
-            // update inventory
-            inventoryRecord.update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
+                // update inventory
+                inventoryRecord.update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
 
-            // add cost of making the pastry
-            price += pastry.cost();
+                // add cost of making the pastry
+                price += pastry.cost();
+            }
         }
 
         // set total cost of making the order

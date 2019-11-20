@@ -1,5 +1,6 @@
 package Cafe;
 
+import Customer.Customer;
 import Employee.*;
 
 import java.io.BufferedReader;
@@ -19,8 +20,9 @@ public class Cafe {
     private ArrayList<String> pastryMenu;
     private ArrayList<String> toppingsMenu;
 
-    public Cafe(CustomerRecord customerRecord) {
-        this.customerRecord = customerRecord;
+
+    public Cafe() {
+        this.customerRecord = createCustomerFromInput();
         this.salesRecord = new SalesRecord();
         this.inventoryRecord = createInventoryFromInput();
 
@@ -83,8 +85,6 @@ public class Cafe {
         }
     }
 
-
-
     void createEmployees(){
         EmployeeRecord employeeRecord = new EmployeeRecord();
         employeeRecord.add(Manager.getInstance(this));
@@ -138,7 +138,24 @@ public class Cafe {
         return inventory;
     }
 
+    CustomerRecord createCustomerFromInput(){
+        CustomerRecord customers = new CustomerRecord();
+        File filename = new File("simulationCustomers.txt");
+        try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
+            String line;
+
+            while ((line = inputFile.readLine()) != null) {
+                customers.add(new Customer(line));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return customers;
+    }
+
+    public CustomerRecord getCustomerRecord() { return customerRecord; }
 
     public ArrayList<String> getBeverageMenu() {return this.beverageMenu;}
 

@@ -53,7 +53,7 @@ public class Cashier extends Employee{
         {
             if (askToSignUp()) {
                 System.out.println("New Loyal Member!");
-                addNewLoyal(customer);
+                addNewLoyal(order);
                 price = applyRewards(price, customer);
             }
         }
@@ -62,7 +62,11 @@ public class Cashier extends Employee{
     }
 
     boolean isRewardsCustomer(Order order) {
-        return order.getCustomer().isLoyal();
+        if (order.getCafe().getCustomerRecord().customers.contains(order.getCustomer())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -78,8 +82,8 @@ public class Cashier extends Employee{
         }
     }
 
-    void addNewLoyal(Customer customer) {
-        customer.setLoyal(true);
+    void addNewLoyal(Order order) {
+        order.getCafe().getCustomerRecord().add(order.getCustomer());
     }
 
     /**

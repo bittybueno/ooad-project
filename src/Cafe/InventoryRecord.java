@@ -31,6 +31,10 @@ public class InventoryRecord implements Subject {
         this.inventory.put(product, value);
     }
 
+    public Map<String, Integer> getInventory() {
+        return inventory;
+    }
+
     public void update(String type, int quantity) {
         Map<String, Integer> inventory = cafe.getInventoryRecord().inventory;
         int newValue = inventory.get(type) - quantity;
