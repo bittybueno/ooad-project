@@ -1,6 +1,9 @@
 package Cafe;
 
 import Customer.Customer;
+import Product.Product;
+
+import java.util.ArrayList;
 
 public class Reciept {
     private Customer customer;

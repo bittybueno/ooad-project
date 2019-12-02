@@ -11,17 +11,24 @@ public class Order implements Command{
     private Customer customer;
     private ArrayList<String> kitchenOrder;
     private ArrayList<String> beverageOrder;
+    private ArrayList<Product> products;
     private Barista barista;
     private Chef chef;
     private Cafe cafe;
     private ArrayList<String> toppings;
     private double price;
 
-    SimpleBeverageFactory beverageFactory = new SimpleBeverageFactory();
-    BeverageStore beverageStore = new BeverageStore(beverageFactory);
+    public ArrayList<String> getToppings() {
+        return toppings;
+    }
 
-    SimplePastryFactory pastryFactory = new SimplePastryFactory();
-    PastryStore pastryStore = new PastryStore(pastryFactory);
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    public void addProducts(Product product) {
+        this.products.add(product);
+    }
 
     public Order(Customer customer, Cafe cafe, ArrayList<String> beverageOrder, ArrayList<String> kitchenOrder, ArrayList<String> toppings, Barista barista, Chef chef) {
         this.customer = customer;
@@ -31,6 +38,15 @@ public class Order implements Command{
         this.chef = chef;
         this.toppings = toppings;
         this.cafe = cafe;
+
+        ArrayList<Product> products = new ArrayList<Product>();
+        this.products = products;
+
+
+    }
+
+    public void addPrice(double price) {
+        this.price += price;
     }
 
     public Cafe getCafe() {
@@ -38,67 +54,17 @@ public class Order implements Command{
     }
 
     public void execute(String type) {
-        double price = 0.0;
         Barista barista = this.getBarista();
         Chef chef = this.getChef();
         InventoryRecord inventoryRecord = this.cafe.getInventoryRecord();
 
         if (!this.getBeverageOrder().isEmpty() && type.equals("Beverage")) {
-            // loop through beverage order, create beverage, set associated costs
-            for (int i = 0; i < this.getBeverageOrder().size(); i++) {
-                // create beverage
-                Beverage beverage = beverageStore.createBeverage(this.getBeverageOrder().get(i));
-                if (!this.toppings.isEmpty()) {
-                    beverage = addToppings(this.toppings, beverage);
-                }
-
-                // announce beverage is being prepared
-                barista.announce(this.getBeverageOrder().get(i));
-
-                // update inventory
-                inventoryRecord.update(this.getBeverageOrder().get(i), this.getBeverageOrder().size());
-
-                // add cost of making the beverage
-                price += beverage.cost();
-            }
+            barista.orderUp(this);
         }
 
         if (!this.getKitchenOrder().isEmpty() && type.equals("Kitchen")) {
-            // loop through food order, create beverage, set associated costs
-            for (int i = 0; i < this.getKitchenOrder().size(); i++) {
-                // create pastry
-                String kitchenOrder = this.getKitchenOrder().get(i);
-                Pastry pastry = pastryStore.createPastry(kitchenOrder);
-
-                // announce pastry is being prepared
-                chef.announce(kitchenOrder);
-
-                // update inventory
-                inventoryRecord.update(this.getKitchenOrder().get(i), this.getKitchenOrder().size());
-
-                // add cost of making the pastry
-                price += pastry.cost();
-            }
+            chef.orderUp(this);
         }
-
-        // set total cost of making the order
-        this.price += price;
-    }
-
-    /**
-     * Decorator
-     */
-    public Beverage addToppings(ArrayList<String> toppings, Beverage beverage) {
-        Beverage modifiedBeverage = null;
-        for (int i = 0; i < toppings.size(); i++) {
-            if (toppings.get(i).equals("Whip Cream")) {
-                modifiedBeverage = new WhipCream(beverage);
-            }
-            if (toppings.get(i).equals("Extra Shot")) {
-                modifiedBeverage = new ExtraShot(beverage);
-            }
-        }
-        return modifiedBeverage;
     }
 
     public double getPrice() {
@@ -122,19 +88,22 @@ public class Order implements Command{
     }
 
     public void prettyPrint() {
-        System.out.println("\nBeverage Order: ");
-        for (int i = 0; i < beverageOrder.size(); i++) {
-            System.out.println(beverageOrder.get(i));
-        }
-
-        System.out.println("\nKitchen Order: ");
-        for (int i = 0; i < kitchenOrder.size(); i++) {
-            System.out.println(kitchenOrder.get(i));
-        }
-
-        System.out.println("\nAdd Ons: ");
-        for (int i = 0; i < toppings.size(); i++) {
-            System.out.println(toppings.get(i));
+//        System.out.println("\nBeverage Order: ");
+//        for (int i = 0; i < beverageOrder.size(); i++) {
+//            System.out.println(beverageOrder.get(i));
+//        }
+//
+//        System.out.println("\nKitchen Order: ");
+//        for (int i = 0; i < kitchenOrder.size(); i++) {
+//            System.out.println(kitchenOrder.get(i));
+//        }
+//
+//        System.out.println("\nAdd Ons: ");
+//        for (int i = 0; i < toppings.size(); i++) {
+//            System.out.println(toppings.get(i));
+//        }
+        for (int i = 0; i < products.size(); i++) {
+            System.out.println(products.get(i).getDescription() + " ... $" +products.get(i).cost());
         }
     }
 }

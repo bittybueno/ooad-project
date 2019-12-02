@@ -2,38 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a1de46-5f93-4ee6-b84e-5e526745f35d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/CustomerRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/CustomerRecord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/EmployeeRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/EmployeeRecord.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Record.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Barista.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Barista.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Cashier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Chef.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Chef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/BeverageDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/BeverageDecorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/Coffee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/Coffee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/Muffin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/Muffin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/Pastry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/Pastry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulationBevMenu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simulationBevMenu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulationCustomers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simulationCustomers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/CustomerRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/CustomerRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/EmployeeRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/EmployeeRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cafe/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cafe/Reciept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Reciept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/SalesRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/SalesRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee/Barista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Barista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Cashier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Chef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/KitchenEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/KitchenEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/BeverageDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/BeverageDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/Coffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/Coffee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/Muffin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/Muffin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/Pastry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/Pastry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,129 +19,144 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Simulation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#customersForTheDay#0;class#Simulation#0" />
-                <element signature="method#employeesForTheDay#0;class#Simulation#0" />
-                <element signature="method#randomToppingsOrder#0;class#Simulation#0" />
-                <element signature="method#randomPastryOrder#0;class#Simulation#0" />
-                <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
-                <element signature="method#printCustomerOrder#0;class#Simulation#0" />
-                <element signature="docComment;method#order#0;class#Simulation#0" />
-                <element signature="method#order#0;class#Simulation#0" />
-                <element signature="method#daySimulation#0;class#Simulation#0" />
-                <element signature="docComment;method#weeklySim#0;class#Simulation#0" />
-                <element signature="method#weeklySim#0;class#Simulation#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cafe/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Order#0;class#Order#0" />
-                <element signature="docComment;method#addToppings#0;class#Order#0" />
-                <element signature="method#addToppings#0;class#Order#0" />
-                <element signature="e#3597#3598#0" expanded="true" />
-                <element signature="e#3625#3626#0" expanded="true" />
-                <element signature="e#3759#3760#0" expanded="true" />
-                <element signature="e#3790#3791#0" expanded="true" />
-                <element signature="e#3840#3841#0" expanded="true" />
-                <element signature="e#3875#3876#0" expanded="true" />
-                <element signature="e#3926#3927#0" expanded="true" />
-                <element signature="e#3962#3963#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/simulationCustomers.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Employee/Chef.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Employee/KitchenEmployee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cafe/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Employee/Cashier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#takeOrder#0;class#Cashier#0" />
-                <element signature="docComment;method#calculatePrice#0;class#Cashier#0" />
-                <element signature="docComment;method#askToSignUp#0;class#Cashier#0" />
-                <element signature="method#askToSignUp#0;class#Cashier#0" />
-                <element signature="docComment;method#applyRewards#0;class#Cashier#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cafe/Reciept.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Employee/Barista.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Barista#0;class#Barista#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Simulation.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="62">
+                  <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#employeesForTheDay#0;class#Simulation#0" />
+                    <element signature="method#randomToppingsOrder#0;class#Simulation#0" />
+                    <element signature="method#randomPastryOrder#0;class#Simulation#0" />
+                    <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
+                    <element signature="method#printCustomerOrder#0;class#Simulation#0" />
+                    <element signature="docComment;method#order#0;class#Simulation#0" />
+                    <element signature="method#order#0;class#Simulation#0" />
+                    <element signature="method#daySimulation#0;class#Simulation#0" />
+                    <element signature="docComment;method#weeklySim#0;class#Simulation#0" />
+                    <element signature="method#weeklySim#0;class#Simulation#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Cafe/InventoryRecord.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="48" column="31" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="31" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#InventoryRecord#0;class#InventoryRecord#0" />
+                    <element signature="method#update#0;class#InventoryRecord#0" />
+                    <element signature="method#fillInventory#0;class#InventoryRecord#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Employee/Chef.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" selection-start-line="13" selection-end-line="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Employee/Cashier.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="docComment;method#takeOrder#0;class#Cashier#0" />
+                    <element signature="docComment;method#calculatePrice#0;class#Cashier#0" />
+                    <element signature="docComment;method#askToSignUp#0;class#Cashier#0" />
+                    <element signature="method#askToSignUp#0;class#Cashier#0" />
+                    <element signature="e#2394#2395#0" expanded="true" />
+                    <element signature="docComment;method#applyRewards#0;class#Cashier#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Employee/Barista.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="118">
+                  <caret line="16" selection-start-line="16" selection-end-line="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#Barista#0;class#Barista#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Cafe/Order.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="105" column="73" selection-start-line="105" selection-start-column="73" selection-end-line="105" selection-end-column="73" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1276#1277#0" expanded="true" />
+                    <element signature="e#1311#1312#0" expanded="true" />
+                    <element signature="e#1340#1341#0" expanded="true" />
+                    <element signature="e#1367#1368#0" expanded="true" />
+                    <element signature="e#1841#1842#0" expanded="true" />
+                    <element signature="e#1869#1870#0" expanded="true" />
+                    <element signature="e#2003#2004#0" expanded="true" />
+                    <element signature="e#2034#2035#0" expanded="true" />
+                    <element signature="e#2084#2085#0" expanded="true" />
+                    <element signature="e#2119#2120#0" expanded="true" />
+                    <element signature="e#2170#2171#0" expanded="true" />
+                    <element signature="e#2206#2207#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Employee/Chef.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="219">
+                  <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="42" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Cafe/Reciept.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -229,14 +221,14 @@
         <option value="$PROJECT_DIR$/simulationEmployees.txt" />
         <option value="$PROJECT_DIR$/src/Simulation.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Command.java" />
-        <option value="$PROJECT_DIR$/src/Employee/Barista.java" />
-        <option value="$PROJECT_DIR$/src/Employee/Chef.java" />
         <option value="$PROJECT_DIR$/src/Employee/KitchenEmployee.java" />
-        <option value="$PROJECT_DIR$/src/Employee/Cashier.java" />
-        <option value="$PROJECT_DIR$/src/Cafe/Order.java" />
-        <option value="$PROJECT_DIR$/src/Cafe/Reciept.java" />
         <option value="$PROJECT_DIR$/src/Cafe/SalesRecord.java" />
         <option value="$PROJECT_DIR$/simulationCustomers.txt" />
+        <option value="$PROJECT_DIR$/src/Employee/Chef.java" />
+        <option value="$PROJECT_DIR$/src/Cafe/Reciept.java" />
+        <option value="$PROJECT_DIR$/src/Employee/Barista.java" />
+        <option value="$PROJECT_DIR$/src/Employee/Cashier.java" />
+        <option value="$PROJECT_DIR$/src/Cafe/Order.java" />
       </list>
     </option>
   </component>
@@ -301,7 +293,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575316833406" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575330474368" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -447,7 +439,7 @@
       <workItem from="1574277487327" duration="4590000" />
       <workItem from="1574291632712" duration="167000" />
       <workItem from="1575235827600" duration="6274000" />
-      <workItem from="1575313405681" duration="2786000" />
+      <workItem from="1575313405681" duration="5873000" />
     </task>
     <servers />
   </component>
@@ -484,13 +476,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65490000" />
+    <option name="totallyTimeSpent" value="68577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08941345" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08941345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -499,7 +491,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35923567" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35923567" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -670,19 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cafe/InventoryRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#InventoryRecord#0;class#InventoryRecord#0" />
-            <element signature="method#update#0;class#InventoryRecord#0" />
-            <element signature="method#fillInventory#0;class#InventoryRecord#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cafe/EmployeeRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -810,13 +789,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cafe/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Employee/KitchenEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cafe/SalesRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulationCustomers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+        <state relative-caret-position="62">
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#customersForTheDay#0;class#Simulation#0" />
             <element signature="method#employeesForTheDay#0;class#Simulation#0" />
             <element signature="method#randomToppingsOrder#0;class#Simulation#0" />
             <element signature="method#randomPastryOrder#0;class#Simulation#0" />
@@ -831,17 +837,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cafe/Command.java">
+    <entry file="file://$PROJECT_DIR$/src/Cafe/InventoryRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        <state relative-caret-position="390">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#InventoryRecord#0;class#InventoryRecord#0" />
+            <element signature="method#update#0;class#InventoryRecord#0" />
+            <element signature="method#fillInventory#0;class#InventoryRecord#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cafe/Reciept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Employee/Barista.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="118">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Barista#0;class#Barista#0" />
@@ -851,72 +873,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Employee/Chef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Employee/KitchenEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Employee/Cashier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+        <state relative-caret-position="135">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#takeOrder#0;class#Cashier#0" />
             <element signature="docComment;method#calculatePrice#0;class#Cashier#0" />
             <element signature="docComment;method#askToSignUp#0;class#Cashier#0" />
             <element signature="method#askToSignUp#0;class#Cashier#0" />
+            <element signature="e#2394#2395#0" expanded="true" />
             <element signature="docComment;method#applyRewards#0;class#Cashier#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cafe/Reciept.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cafe/SalesRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cafe/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="105" column="73" selection-start-line="105" selection-start-column="73" selection-end-line="105" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Order#0;class#Order#0" />
-            <element signature="docComment;method#addToppings#0;class#Order#0" />
-            <element signature="method#addToppings#0;class#Order#0" />
-            <element signature="e#3597#3598#0" expanded="true" />
-            <element signature="e#3625#3626#0" expanded="true" />
-            <element signature="e#3759#3760#0" expanded="true" />
-            <element signature="e#3790#3791#0" expanded="true" />
-            <element signature="e#3840#3841#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-            <element signature="e#3962#3963#0" expanded="true" />
+            <element signature="e#1276#1277#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2034#2035#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2119#2120#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simulationCustomers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -15,15 +15,12 @@ public class Cashier extends Employee{
      * by running transaction
      */
     public void takeOrder(Order order) {
-        Barista barista = order.getBarista();
-        Chef chef = order.getChef();
         SalesRecord salesRecord = getCafe().getSalesRecord();
         double priceBeforeRewards;
         double price;
 
-        // set and invoke commands on receivers
-        barista.orderUp(order);
-        chef.orderUp(order);
+        order.execute("Beverage");
+        order.execute("Kitchen");
 
         // calculate price of order
         priceBeforeRewards = calculatePrice(order).get("priceBefore");
