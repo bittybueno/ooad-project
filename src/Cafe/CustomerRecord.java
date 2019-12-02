@@ -17,14 +17,6 @@ public class CustomerRecord {
 
     }
 
-    public ArrayList<Customer> getCustomerRecord() {
-        return customers;
-    }
-
-
     public void add(Customer c) { this.customers.add(c); }
-    public void isLoyal() {
-
-    }
 
 }

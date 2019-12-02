@@ -7,30 +7,11 @@ import java.util.*;
 public class Simulation {
     public ArrayList<Customer> newCustomers;
     public Cafe cafe;
-    public int maxLoyal;
-    public int min;
 
     public Simulation() {
         createNewCustomers();
-        this.maxLoyal = 6;
-        this.min = 0;
+
     }
-
-
-
-    //    CustomerRecord createCustomerRecord(){
-//        CustomerRecord customerRecord = new CustomerRecord();
-//        customerRecord.add(new Customer("David"));
-//        customerRecord.add(new Customer("Jozi"));
-//        customerRecord.add(new Customer("Terri"));
-//        customerRecord.add(new Customer("Colby"));
-//        customerRecord.add(new Customer("Parker"));
-//        customerRecord.add(new Customer("Hodge"));
-//
-//        this.loyalCustomersRecord = customerRecord;
-//
-//        return customerRecord;
-//    }
 
     void createNewCustomers() {
         ArrayList<Customer> newCustomers = new ArrayList<Customer>();
@@ -44,12 +25,11 @@ public class Simulation {
         ArrayList<Customer> customers = new ArrayList<Customer>();
         ArrayList<Customer> loyal = cafe.getCustomerRecord().customers;
 
-        int lenOfNew = this.newCustomers.size();
         int customerNumLoyal = randomInt(0, loyal.size()); // loyal
         int customerNumNew = randomInt(0, this.newCustomers.size()/3); // loyal
 
         Collections.shuffle(loyal);
-        for (int i = 0; i < loyal.size(); i ++) {
+        for (int i = 0; i < customerNumLoyal; i ++) {
             customers.add(loyal.get(i));
         }
 
@@ -109,7 +89,7 @@ public class Simulation {
 
     ArrayList<String> randomBeverageOrder() {
         ArrayList<String> beverage = new ArrayList<String>();
-        int numOfBevs =  1 + (int)(Math.random() * ((3 - 1) + 1));
+        int numOfBevs =  1+ (int)(Math.random() * ((3 - 1) + 1));
 
         int i = 0;
         while (i < numOfBevs) {
@@ -123,7 +103,7 @@ public class Simulation {
 
     ArrayList<String> randomToppingsOrder() {
         ArrayList<String> toppings = new ArrayList<String>();
-        int numOfToppings =  1 + (int)(Math.random() * ((2 - 1) + 1));
+        int numOfToppings =   (int)(Math.random() * ((2 - 1) + 1));
 
         int i = 0;
         while (i < numOfToppings) {
@@ -138,7 +118,7 @@ public class Simulation {
     ArrayList<String> randomPastryOrder() {
 
         ArrayList<String> pastry = new ArrayList<String>();
-        int numOfPastries =  1 + (int)(Math.random() * ((2 - 1) + 1));
+        int numOfPastries =  (int)(Math.random() * ((2 - 1) + 1));
 
         int i = 0;
         while (i < numOfPastries) {
@@ -215,15 +195,9 @@ public class Simulation {
     public static void main(String[] args) {
         Simulation sim = new Simulation();
 
-        // setting up cafe simulation
-//        CustomerRecord customers = sim.createCustomerRecord();
-
         Cafe cafe = new Cafe();
-        // setting up variables for simulation
         sim.setCafe(cafe);
 
-
-//        // run simulation for a week
         sim.weeklySim();
     }
 }

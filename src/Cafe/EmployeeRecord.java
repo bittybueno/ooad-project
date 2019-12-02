@@ -20,11 +20,7 @@ public class EmployeeRecord {
         return employees;
     }
 
-
     public void add(Employee employee) {
         this.employees.add(employee);
     }
-    public void update() {}
-    public void get() {}
-
 }

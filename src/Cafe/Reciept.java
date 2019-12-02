@@ -27,8 +27,8 @@ public class Reciept {
         System.out.println("\n********* Reciept *********");
         System.out.println("Customer Name: " + customer.getName());
         order.prettyPrint();
-        System.out.println("Savings: " + savings);
-        System.out.println("Cost: " + cost);
+        System.out.printf("Savings: $%.2f \n", savings);
+        System.out.printf("Cost: $%.2f \n", cost);
         System.out.println("***************************");
 
 

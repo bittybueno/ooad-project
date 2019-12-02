@@ -12,7 +12,7 @@ public class Barista extends Employee implements KitchenEmployee{
 
     public void orderUp(Order order){
         this.order = order;
-        order.execute();
+        order.execute("Beverage");
     }
 
     // Template

@@ -37,13 +37,13 @@ public class Order implements Command{
         return cafe;
     }
 
-    public void execute() {
+    public void execute(String type) {
         double price = 0.0;
         Barista barista = this.getBarista();
         Chef chef = this.getChef();
         InventoryRecord inventoryRecord = this.cafe.getInventoryRecord();
 
-        if (!this.getBeverageOrder().isEmpty()) {
+        if (!this.getBeverageOrder().isEmpty() && type.equals("Beverage")) {
             // loop through beverage order, create beverage, set associated costs
             for (int i = 0; i < this.getBeverageOrder().size(); i++) {
                 // create beverage
@@ -63,7 +63,7 @@ public class Order implements Command{
             }
         }
 
-        if (!this.getKitchenOrder().isEmpty()) {
+        if (!this.getKitchenOrder().isEmpty() && type.equals("Kitchen")) {
             // loop through food order, create beverage, set associated costs
             for (int i = 0; i < this.getKitchenOrder().size(); i++) {
                 // create pastry
@@ -82,7 +82,7 @@ public class Order implements Command{
         }
 
         // set total cost of making the order
-        this.price = price;
+        this.price += price;
     }
 
     /**
