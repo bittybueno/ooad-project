@@ -87,7 +87,6 @@ public class Cafe {
 
     void createEmployees(){
         EmployeeRecord employeeRecord = new EmployeeRecord();
-        employeeRecord.add(Manager.getInstance(this));
         this.employeeRecord = setEmployeesFromInput();
 
     }
@@ -112,11 +111,15 @@ public class Cafe {
                 if (splited[0].equals("Chef")) {
                     employeeRecord.add(new Chef(splited[1], splited[2], Integer.parseInt(splited[3]), this));
                 }
+                if (splited[0].equals("Manager")) {
+                    employeeRecord.add(new Manager(splited[1], splited[2], Integer.parseInt(splited[3]), this));
+                }
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return employeeRecord;
     }
 

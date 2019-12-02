@@ -39,7 +39,7 @@ public class InventoryRecord implements Subject {
         Map<String, Integer> inventory = cafe.getInventoryRecord().inventory;
         int newValue = inventory.get(type) - quantity;
         inventory.put(type, newValue);
-        if (inventory.get(type) == 0) {
+        if (inventory.get(type) <= 0) {
             System.out.println("\n\nCafe is out of " + type);
             // notify manager
             notifyObservers();
@@ -50,7 +50,7 @@ public class InventoryRecord implements Subject {
         inventory.put("Coffee", 300);
         inventory.put("Espresso", 300);
         inventory.put("Muffin", 100);
-        inventory.put("BananaBread", 100);
+        inventory.put("Bread", 100);
     }
 
     public void prettyPrint() {

@@ -6,7 +6,6 @@ import java.util.*;
 
 public class Simulation {
     public ArrayList<Customer> newCustomers;
-    public CustomerRecord loyalCustomersRecord;
     public Cafe cafe;
     public int maxLoyal;
     public int min;
@@ -17,19 +16,21 @@ public class Simulation {
         this.min = 0;
     }
 
-    CustomerRecord createCustomerRecord(){
-        CustomerRecord customerRecord = new CustomerRecord();
-        customerRecord.add(new Customer("David"));
-        customerRecord.add(new Customer("Jozi"));
-        customerRecord.add(new Customer("Terri"));
-        customerRecord.add(new Customer("Colby"));
-        customerRecord.add(new Customer("Parker"));
-        customerRecord.add(new Customer("Hodge"));
 
-        this.loyalCustomersRecord = customerRecord;
 
-        return customerRecord;
-    }
+    //    CustomerRecord createCustomerRecord(){
+//        CustomerRecord customerRecord = new CustomerRecord();
+//        customerRecord.add(new Customer("David"));
+//        customerRecord.add(new Customer("Jozi"));
+//        customerRecord.add(new Customer("Terri"));
+//        customerRecord.add(new Customer("Colby"));
+//        customerRecord.add(new Customer("Parker"));
+//        customerRecord.add(new Customer("Hodge"));
+//
+//        this.loyalCustomersRecord = customerRecord;
+//
+//        return customerRecord;
+//    }
 
     void createNewCustomers() {
         ArrayList<Customer> newCustomers = new ArrayList<Customer>();
@@ -41,24 +42,22 @@ public class Simulation {
 
     ArrayList<Customer> customersForTheDay(){
         ArrayList<Customer> customers = new ArrayList<Customer>();
-//        ArrayList<Customer> newCustomers = new ArrayList<Customer>();
+        ArrayList<Customer> loyal = cafe.getCustomerRecord().customers;
 
         int lenOfNew = this.newCustomers.size();
-        int customerNumLoyal = randomInt(0, this.maxLoyal); // loyal
+        int customerNumLoyal = randomInt(0, loyal.size()); // loyal
         int customerNumNew = randomInt(0, this.newCustomers.size()/3); // loyal
 
-        Collections.shuffle(this.loyalCustomersRecord.customers);
-        for (int i = 0; i < customerNumLoyal; i ++) {
-            customers.add(this.loyalCustomersRecord.customers.get(i));
+        Collections.shuffle(loyal);
+        for (int i = 0; i < loyal.size(); i ++) {
+            customers.add(loyal.get(i));
         }
 
         Collections.shuffle(this.newCustomers);
         for (int i = 0; i < customerNumNew; i ++) {
             customers.add(this.newCustomers.get(i));
         }
-
         return customers;
-
     }
 
     HashMap<String, Employee> employeesForTheDay(EmployeeRecord employeesForCafe) {
@@ -187,8 +186,10 @@ public class Simulation {
 
     public void daySimulation() {
         HashMap<String, Employee> employees = employeesForTheDay(cafe.getEmployeeRecord());
+        System.out.println(cafe.getEmployeeRecord());
         ArrayList<Customer> customers = customersForTheDay();
         for (int i = 0; i < customers.size(); i++) {
+//            System.out.println(employees.get("HERE!!!" + "Manager").getName());
             cafe.getInventoryRecord().setObserver((Manager) employees.get("Manager"));
             order(customers.get(i), (Cashier) employees.get("Cashier"), (Barista) employees.get("Barista"), (Chef) employees.get("Chef"));
         }
@@ -203,6 +204,7 @@ public class Simulation {
             daySimulation();
         }
         cafe.getInventoryRecord().prettyPrint();
+        cafe.getSalesRecord().prettyPrint();;
     }
 
     public void setCafe(Cafe cafe) {this.cafe = cafe;}
@@ -214,12 +216,12 @@ public class Simulation {
         Simulation sim = new Simulation();
 
         // setting up cafe simulation
-        CustomerRecord customers = sim.createCustomerRecord();
+//        CustomerRecord customers = sim.createCustomerRecord();
 
         Cafe cafe = new Cafe();
-
         // setting up variables for simulation
         sim.setCafe(cafe);
+
 
 //        // run simulation for a week
         sim.weeklySim();

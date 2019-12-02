@@ -15,4 +15,14 @@ public class SalesRecord {
     }
 
     public void add(Reciept r) { this.sales.add(r);}
+
+    public void prettyPrint() {
+        System.out.println("\n________Cafe Sales Record________");
+        for (int i = 0; i < sales.size(); i++) {
+            Reciept reciept = sales.get(i);
+            System.out.println("\nCustomer Name: " + reciept.getCustomer().getName());
+            System.out.printf("Cost: %.2f \n", reciept.getCost());
+        }
+        System.out.println("\n______________________________\n");
+    }
 }

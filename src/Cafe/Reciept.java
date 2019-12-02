@@ -15,11 +15,19 @@ public class Reciept {
         this.savings = savings;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
     public void prettyPrint() {
         System.out.println("\n********* Reciept *********");
         System.out.println("Customer Name: " + customer.getName());
         order.prettyPrint();
-        if (customer.isLoyal()) {System.out.println("Loyal Member Savings: " + savings);}
+        System.out.println("Savings: " + savings);
         System.out.println("Cost: " + cost);
         System.out.println("***************************");
 

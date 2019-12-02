@@ -26,20 +26,4 @@ abstract public class Employee {
         return firstName + " " +lastName;
     }
 
-    public int getEmployeeID() {
-        return employeeID;
-    }
-
-
-    public int getPayRate() {
-        return payRate;
-    }
-
-    public boolean login(){
-        return true;
-    }
-
-    public void inputHours(){
-
-    }
 }
