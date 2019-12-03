@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class MyUnitTest {
     @Test
     public void testTakeOrderBeverage() {
-        Cafe cafe = new Cafe();
+        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );;
         SalesRecord sales = new SalesRecord();
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
@@ -40,7 +40,7 @@ public class MyUnitTest {
 
     @Test
     public void testTakeOrderTwoBeverages() {
-        Cafe cafe = new Cafe();
+        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );
         SalesRecord sales = new SalesRecord();
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
@@ -68,7 +68,7 @@ public class MyUnitTest {
 
     @Test
     public void testTakeOrderFood() {
-        Cafe cafe = new Cafe();
+        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );
         SalesRecord sales = new SalesRecord();
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
@@ -93,7 +93,7 @@ public class MyUnitTest {
 
     @Test
     public void testInventory() {
-        Cafe cafe = new Cafe();
+        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );
         SalesRecord sales = new SalesRecord();
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);

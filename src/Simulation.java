@@ -163,13 +163,21 @@ public class Simulation {
         return min + (int)(Math.random() * ((max - min) + 1));
     }
 
+    public void printEmployees(HashMap<String, Employee> employees) {
+        System.out.println("Manager: " + employees.get("Manager").getName());
+        System.out.println("Cashier: " + employees.get("Cashier").getName());
+        System.out.println("Barista: " + employees.get("Barista").getName());
+        System.out.println("Chef: " + employees.get("Chef").getName());
+
+
+
+    }
 
     public void daySimulation() {
         HashMap<String, Employee> employees = employeesForTheDay(cafe.getEmployeeRecord());
-        System.out.println(cafe.getEmployeeRecord());
+        printEmployees(employees);
         ArrayList<Customer> customers = customersForTheDay();
         for (int i = 0; i < customers.size(); i++) {
-//            System.out.println(employees.get("HERE!!!" + "Manager").getName());
             cafe.getInventoryRecord().setObserver((Manager) employees.get("Manager"));
             order(customers.get(i), (Cashier) employees.get("Cashier"), (Barista) employees.get("Barista"), (Chef) employees.get("Chef"));
         }
@@ -195,7 +203,7 @@ public class Simulation {
     public static void main(String[] args) {
         Simulation sim = new Simulation();
 
-        Cafe cafe = new Cafe();
+        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers.txt" );
         sim.setCafe(cafe);
 
         sim.weeklySim();

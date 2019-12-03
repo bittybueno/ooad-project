@@ -1,9 +1,9 @@
 package Employee;
 import Cafe.*;
 
-// SINGLETON & OBSERVER DESIGN PATTERN
+//OBSERVER DESIGN PATTERN
 
-public class Manager extends Employee {
+public class Manager extends Employee implements Observer {
 
     // private constructor to force use of
     // getInstance() to create Singleton object
@@ -14,7 +14,9 @@ public class Manager extends Employee {
 
     public void orderInventory() {
         System.out.println(this.getName() + " is filling the inventory\n\n");
-        this.getCafe().getInventoryRecord().fillInventory();
+        fillInventory();
     }
+
+    public void fillInventory() {this.getCafe().getInventoryRecord().fillInventory();}
 
 }

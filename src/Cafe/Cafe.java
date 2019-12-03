@@ -21,10 +21,10 @@ public class Cafe {
     private ArrayList<String> toppingsMenu;
 
 
-    public Cafe() {
-        this.customerRecord = createCustomerFromInput();
+    public Cafe(String employeeFile, String inventoryFile, String customerFile) {
+        this.customerRecord = createCustomerFromInput(customerFile);
         this.salesRecord = new SalesRecord();
-        this.inventoryRecord = createInventoryFromInput();
+        this.inventoryRecord = createInventoryFromInput(inventoryFile);
 
         ArrayList<String> beverageMenu = new ArrayList<>();
         this.beverageMenu = beverageMenu;
@@ -33,11 +33,11 @@ public class Cafe {
         ArrayList<String> toppingsMenu = new ArrayList<>();
         this.toppingsMenu = toppingsMenu;
 
-        createEmployees();
+        createEmployees(employeeFile);
         setBevMenu();
         setPastryMenu();
         setToppingsMenu();
-        createInventoryFromInput();
+//        createInventoryFromInput();
     }
 
     void setBevMenu() {
@@ -85,16 +85,16 @@ public class Cafe {
         }
     }
 
-    void createEmployees(){
+    void createEmployees(String file){
         EmployeeRecord employeeRecord = new EmployeeRecord();
-        this.employeeRecord = setEmployeesFromInput();
+        this.employeeRecord = setEmployeesFromInput(file);
 
     }
 
-    EmployeeRecord setEmployeesFromInput() {
+    EmployeeRecord setEmployeesFromInput(String file) {
         EmployeeRecord employeeRecord = new EmployeeRecord();
 //        System.out.println(this.inputEmployees);
-        File filename = new File("simulationEmployees.txt");
+        File filename = new File(file);
 
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
@@ -123,9 +123,9 @@ public class Cafe {
         return employeeRecord;
     }
 
-    InventoryRecord createInventoryFromInput(){
+    InventoryRecord createInventoryFromInput(String file){
         InventoryRecord inventory = new InventoryRecord(this);
-        File filename = new File("simulationInventory.txt");
+        File filename = new File(file);
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
             String line;
@@ -141,9 +141,9 @@ public class Cafe {
         return inventory;
     }
 
-    CustomerRecord createCustomerFromInput(){
+    CustomerRecord createCustomerFromInput(String file){
         CustomerRecord customers = new CustomerRecord();
-        File filename = new File("simulationCustomers.txt");
+        File filename = new File(file);
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
             String line;

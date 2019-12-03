@@ -88,22 +88,8 @@ public class Order implements Command{
     }
 
     public void prettyPrint() {
-//        System.out.println("\nBeverage Order: ");
-//        for (int i = 0; i < beverageOrder.size(); i++) {
-//            System.out.println(beverageOrder.get(i));
-//        }
-//
-//        System.out.println("\nKitchen Order: ");
-//        for (int i = 0; i < kitchenOrder.size(); i++) {
-//            System.out.println(kitchenOrder.get(i));
-//        }
-//
-//        System.out.println("\nAdd Ons: ");
-//        for (int i = 0; i < toppings.size(); i++) {
-//            System.out.println(toppings.get(i));
-//        }
         for (int i = 0; i < products.size(); i++) {
-            System.out.println(products.get(i).getDescription() + " ... $" +products.get(i).cost());
+            System.out.println(products.get(i).getDescription() + " ... $" + products.get(i).cost());
         }
     }
 }
