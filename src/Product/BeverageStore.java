@@ -7,6 +7,7 @@ public  class BeverageStore {
     public BeverageStore(SimpleBeverageFactory factory) {
         this.factory = factory;
     }
+
     public Beverage createBeverage(String type) {
         Beverage beverage;
         beverage = factory.createBeverage(type);

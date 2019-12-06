@@ -7,6 +7,7 @@ public class PastryStore
     public PastryStore(SimplePastryFactory factory) {
         this.factory = factory;
     }
+
     public Pastry createPastry(String type) {
         Pastry pastry;
         pastry = factory.createPastry(type);

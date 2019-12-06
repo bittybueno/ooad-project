@@ -2,6 +2,8 @@ package Employee;
 
 import Cafe.*;
 import Customer.Customer;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Cashier extends Employee{
@@ -10,21 +12,19 @@ public class Cashier extends Employee{
     }
 
     /**
-     * Cashier takes order. Invokes the order (COMMAND) with orderUp(order).
+     * Cashier takes order. Invokes the order (COMMAND) with execute().
      * Cashier calculates the price of the order. Cashier updates records
      * by running transaction
      */
     public void takeOrder(Order order) {
         SalesRecord salesRecord = getCafe().getSalesRecord();
-        double priceBeforeRewards;
-        double price;
 
         order.execute("Beverage");
         order.execute("Kitchen");
 
         // calculate price of order
-        priceBeforeRewards = calculatePrice(order).get("priceBefore");
-        price = calculatePrice(order).get("priceAfter");
+        double priceBeforeRewards = calculatePrice(order).get("priceBefore");
+        double price = calculatePrice(order).get("priceAfter");
 
         // add transaction to sales record
         Reciept reciept = new Reciept(order.getCustomer(), order, price, priceBeforeRewards - price);
@@ -36,13 +36,13 @@ public class Cashier extends Employee{
 
     /**
      * Calculate the cost of the order. Handles rewards if applicable.
+     * Returns the price before applying  savings and after.
      */
     public HashMap<String, Double> calculatePrice(Order order) {
-        HashMap<String, Double> ret = new HashMap<String, Double>();
+        HashMap<String, Double> prices = new HashMap<String, Double>();
         Customer customer = order.getCustomer();
         double price = order.getPrice();
-
-        ret.put("priceBefore", price);
+        prices.put("priceBefore", price);
 
         if (isRewardsCustomer(order)) {
             price = applyRewards(price, customer);
@@ -54,12 +54,15 @@ public class Cashier extends Employee{
                 price = applyRewards(price, customer);
             }
         }
-        ret.put("priceAfter", price);
-        return ret;
+        prices.put("priceAfter", price);
+        return prices;
     }
 
     boolean isRewardsCustomer(Order order) {
-        if (order.getCafe().getCustomerRecord().customers.contains(order.getCustomer())) {
+        ArrayList<Customer> loyalCustomers = order.getCafe().getCustomerRecord().customers;
+        Customer customer = order.getCustomer();
+
+        if (loyalCustomers.contains(customer)) {
             return true;
         } else {
             return false;
@@ -67,7 +70,8 @@ public class Cashier extends Employee{
     }
 
     /**
-     * TODO
+     * Asks customer if they would like to sign up for a loyalty membership. For simulation,
+     * randomly decides.
      */
     public boolean askToSignUp() {
         if(new java.util.Random().nextInt(8)==0){
@@ -79,17 +83,21 @@ public class Cashier extends Employee{
         }
     }
 
+    /**
+     * Adds a new Customer to the Loyalty Members list for that Cafe.
+     */
     void addNewLoyal(Order order) {
         order.getCafe().getCustomerRecord().add(order.getCustomer());
     }
 
     /**
-     * TODO
+     * If a loyal customer accumulates at least 50 points, they will
+     * save $5.00 off of their purchase.
      */
     double applyRewards(double price, Customer customer) {
         customer.setLoyaltyPoints(price);
 
-        if (customer.getLoyaltyPoints() > 200) {
+        if (customer.getLoyaltyPoints() > 50) {
             return price - 5.00;
         }
 

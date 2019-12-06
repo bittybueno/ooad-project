@@ -1,0 +1,5 @@
+Coffee:300
+Espresso:300
+Tea:300
+Muffin:100
+Bread:100

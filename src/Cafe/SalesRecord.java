@@ -11,7 +11,6 @@ public class SalesRecord {
 
         ArrayList<Reciept> sales = new ArrayList<Reciept>();
         this.sales = sales;
-
     }
 
     public void add(Reciept r) { this.sales.add(r);}

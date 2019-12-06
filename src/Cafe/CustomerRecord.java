@@ -1,8 +1,6 @@
 package Cafe;
 
 import Customer.Customer;
-import Employee.Employee;
-
 import java.util.ArrayList;
 
 public class CustomerRecord {

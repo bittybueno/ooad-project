@@ -1,5 +1,7 @@
 package Product;
 
+// FACTORY
+
 public class SimplePastryFactory {
     // encapsulate the creation of a pastry
 

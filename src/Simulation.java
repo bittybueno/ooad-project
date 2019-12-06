@@ -9,8 +9,8 @@ public class Simulation {
     public Cafe cafe;
 
     public Simulation() {
+        // Creates New Customers
         createNewCustomers();
-
     }
 
     void createNewCustomers() {
@@ -18,21 +18,31 @@ public class Simulation {
         newCustomers.add(new Customer("Eric"));
         newCustomers.add(new Customer("Rei"));
         newCustomers.add(new Customer("Connie"));
+        newCustomers.add(new Customer("Paul"));
+        newCustomers.add(new Customer("Tanner"));
+        newCustomers.add(new Customer("Josh"));
         this.newCustomers = newCustomers;
     }
 
+    /**
+     * Simulation takes a random number of loyal and
+     * new customers to visit the shop each day
+     */
     ArrayList<Customer> customersForTheDay(){
         ArrayList<Customer> customers = new ArrayList<Customer>();
         ArrayList<Customer> loyal = cafe.getCustomerRecord().customers;
 
-        int customerNumLoyal = randomInt(0, loyal.size()); // loyal
-        int customerNumNew = randomInt(0, this.newCustomers.size()/3); // loyal
+        // random number of each
+        int customerNumLoyal = randomInt(0, loyal.size());
+        int customerNumNew = randomInt(0, this.newCustomers.size()/3);
 
+        // randomize
         Collections.shuffle(loyal);
         for (int i = 0; i < customerNumLoyal; i ++) {
             customers.add(loyal.get(i));
         }
 
+        // randomize
         Collections.shuffle(this.newCustomers);
         for (int i = 0; i < customerNumNew; i ++) {
             customers.add(this.newCustomers.get(i));
@@ -40,6 +50,10 @@ public class Simulation {
         return customers;
     }
 
+    /**
+     * Simulation takes a random barista, chef,
+     * manager, and cashier
+     */
     HashMap<String, Employee> employeesForTheDay(EmployeeRecord employeesForCafe) {
         ArrayList<Employee> employeeRecord = employeesForCafe.getEmployees();
         HashMap<String, Employee>  employees = new HashMap<String, Employee> ();
@@ -87,6 +101,9 @@ public class Simulation {
 
     }
 
+    /**
+     * Simulation generates a random beverage order
+     */
     ArrayList<String> randomBeverageOrder() {
         ArrayList<String> beverage = new ArrayList<String>();
         int numOfBevs =  1+ (int)(Math.random() * ((3 - 1) + 1));
@@ -101,6 +118,9 @@ public class Simulation {
         return beverage;
     }
 
+    /**
+     * Simulation generates a random Toppings order
+     */
     ArrayList<String> randomToppingsOrder() {
         ArrayList<String> toppings = new ArrayList<String>();
         int numOfToppings =   (int)(Math.random() * ((2 - 1) + 1));
@@ -115,6 +135,9 @@ public class Simulation {
         return toppings;
     }
 
+    /**
+     * Simulation generates a random Pastry order
+     */
     ArrayList<String> randomPastryOrder() {
 
         ArrayList<String> pastry = new ArrayList<String>();
@@ -131,22 +154,8 @@ public class Simulation {
     }
 
     /**
-     * For visualizing the simulation
-     */
-    public void printCustomerOrder(String customerName, ArrayList<String> bevOrder, ArrayList<String> pastryOrder, ArrayList<String> toppings){
-        System.out.printf("\n\n###################################\n ");
-        System.out.printf(customerName + " would like ");
-        ArrayList<String> orderPrint= new ArrayList<String>();
-        orderPrint.addAll(bevOrder);
-        orderPrint.addAll(pastryOrder);
-        orderPrint.addAll(toppings);
-        orderPrint.forEach(value -> System.out.print("- "+value+" -"));
-
-    }
-
-    /**
      * Customer in simulation makes a random order based on the
-     * menu for the simulation
+     * menu for the Cafe
      */
     Order order(Customer customer, Cashier cashier, Barista barista, Chef chef) {
         ArrayList<String> bevOrder = randomBeverageOrder();
@@ -161,16 +170,6 @@ public class Simulation {
 
     int randomInt(int min, int max){
         return min + (int)(Math.random() * ((max - min) + 1));
-    }
-
-    public void printEmployees(HashMap<String, Employee> employees) {
-        System.out.println("Manager: " + employees.get("Manager").getName());
-        System.out.println("Cashier: " + employees.get("Cashier").getName());
-        System.out.println("Barista: " + employees.get("Barista").getName());
-        System.out.println("Chef: " + employees.get("Chef").getName());
-
-
-
     }
 
     public void daySimulation() {
@@ -197,15 +196,52 @@ public class Simulation {
 
     public void setCafe(Cafe cafe) {this.cafe = cafe;}
 
+    /* #################### PRINTING #################### */
+
+    public void printEmployees(HashMap<String, Employee> employees) {
+        System.out.println("Manager: " + employees.get("Manager").getName());
+        System.out.println("Cashier: " + employees.get("Cashier").getName());
+        System.out.println("Barista: " + employees.get("Barista").getName());
+        System.out.println("Chef: " + employees.get("Chef").getName());
+    }
+
+    /**
+     * For visualizing the simulation
+     */
+    public void printCustomerOrder(String customerName, ArrayList<String> bevOrder, ArrayList<String> pastryOrder, ArrayList<String> toppings){
+        System.out.printf("\n\n###################################\n ");
+        System.out.printf(customerName + " would like ");
+        ArrayList<String> orderPrint= new ArrayList<String>();
+        orderPrint.addAll(bevOrder);
+        orderPrint.addAll(pastryOrder);
+        orderPrint.addAll(toppings);
+        orderPrint.forEach(value -> System.out.print("- "+value+" -"));
+
+    }
 
 
 
     public static void main(String[] args) {
         Simulation sim = new Simulation();
 
-        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers.txt" );
-        sim.setCafe(cafe);
+        HashMap<String, String> filenames = new HashMap<String, String>();
+        filenames.put("Employees", "simulationEmployees.txt");
+        filenames.put("Inventory", "simulationInventory.txt");
+        filenames.put("Customers", "simulationCustomers.txt");
+        filenames.put("Beverage", "simulationBevMenu.txt");
+        filenames.put("Food", "simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulationToppingsMenu.txt");
 
+        Cafe cafe = new Cafe(filenames );
+        sim.setCafe(cafe);
         sim.weeklySim();
+
+
+//        filenames.put("Inventory", "simulationInventory2.txt");
+//        filenames.put("Beverage", "simulationBevMenu2.txt");
+//
+//        Cafe cafe2 = new Cafe(filenames);
+//        sim.setCafe(cafe2);
+//        sim.weeklySim();
     }
 }

@@ -1,7 +1,6 @@
 package Cafe;
 
 import Employee.Employee;
-
 import java.util.ArrayList;
 
 public class EmployeeRecord {

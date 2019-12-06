@@ -18,23 +18,22 @@ public class InventoryRecord implements Subject {
 
         Map<String, Integer> inventory = new HashMap<String, Integer>();
         this.inventory = inventory;
-
     }
 
-    public void setObserver(Manager manager) {
-        this.observer = manager;
-    }
-
+    /**
+     * Observer Design Pattern. When Inventory runs out of a Product,
+     * notify Manager (Observer) to perform a restock.
+     */
     public void notifyObservers() { observer.orderInventory();}
 
     public void add(String product, int value) {
         this.inventory.put(product, value);
     }
 
-    public Map<String, Integer> getInventory() {
-        return inventory;
-    }
-
+    /**
+     * After a transaction occurs, update the inventory
+     * for each product that was sold. If a product runs, notify Manager (Observer).
+     */
     public void update(String type, int quantity) {
         Map<String, Integer> inventory = cafe.getInventoryRecord().inventory;
         int newValue = inventory.get(type) - quantity;
@@ -46,12 +45,17 @@ public class InventoryRecord implements Subject {
         }
     }
 
-    public void fillInventory() {
-        inventory.put("Coffee", 300);
-        inventory.put("Espresso", 300);
-        inventory.put("Muffin", 100);
-        inventory.put("Bread", 100);
+    /* #################### GETTERS AND SETTERS #################### */
+
+    public Map<String, Integer> getInventory() {
+        return inventory;
     }
+
+    public void setObserver(Manager manager) {
+        this.observer = manager;
+    }
+
+    /* #################### PRINTING #################### */
 
     public void prettyPrint() {
         System.out.println("\n________Cafe Inventory________");

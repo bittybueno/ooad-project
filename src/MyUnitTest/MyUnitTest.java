@@ -6,6 +6,7 @@ import Employee.*;
 import Cafe.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.*;
@@ -13,8 +14,16 @@ import static org.junit.Assert.*;
 public class MyUnitTest {
     @Test
     public void testTakeOrderBeverage() {
-        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );;
-        SalesRecord sales = new SalesRecord();
+        HashMap<String, String> filenames = new HashMap<String, String>();
+        filenames.put("Employees", "simulationEmployees.txt");
+        filenames.put("Inventory", "simulationInventory.txt");
+        filenames.put("Customers", "simulationCustomers.txt");
+        filenames.put("Beverage", "simulationBevMenu.txt");
+        filenames.put("Food", "simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        Cafe cafe = new Cafe(filenames );
+
+
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
         Cashier cashier = new Cashier("Cathy", "Bishop",2,cafe);
@@ -40,8 +49,15 @@ public class MyUnitTest {
 
     @Test
     public void testTakeOrderTwoBeverages() {
-        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );
-        SalesRecord sales = new SalesRecord();
+        HashMap<String, String> filenames = new HashMap<String, String>();
+        filenames.put("Employees", "simulationEmployees.txt");
+        filenames.put("Inventory", "simulationInventory.txt");
+        filenames.put("Customers", "simulationCustomers.txt");
+        filenames.put("Beverage", "simulationBevMenu.txt");
+        filenames.put("Food", "simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        Cafe cafe = new Cafe(filenames );
+
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
         Cashier cashier = new Cashier("Cathy", "Bishop",2,cafe);
@@ -68,8 +84,15 @@ public class MyUnitTest {
 
     @Test
     public void testTakeOrderFood() {
-        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );
-        SalesRecord sales = new SalesRecord();
+        HashMap<String, String> filenames = new HashMap<String, String>();
+        filenames.put("Employees", "simulationEmployees.txt");
+        filenames.put("Inventory", "simulationInventory.txt");
+        filenames.put("Customers", "simulationCustomers.txt");
+        filenames.put("Beverage", "simulationBevMenu.txt");
+        filenames.put("Food", "simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        Cafe cafe = new Cafe(filenames );
+
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
         Cashier cashier = new Cashier("Cathy", "Bishop",2,cafe);
@@ -93,8 +116,15 @@ public class MyUnitTest {
 
     @Test
     public void testInventory() {
-        Cafe cafe = new Cafe("simulationEmployees.txt","simulationInventory.txt", "simulationCustomers" );
-        SalesRecord sales = new SalesRecord();
+        HashMap<String, String> filenames = new HashMap<String, String>();
+        filenames.put("Employees", "simulationEmployees.txt");
+        filenames.put("Inventory", "simulationInventory.txt");
+        filenames.put("Customers", "simulationCustomers.txt");
+        filenames.put("Beverage", "simulationBevMenu.txt");
+        filenames.put("Food", "simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        Cafe cafe = new Cafe(filenames );
+
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
         Chef chef = new Chef("Eugene", "Crabs", 4, cafe);
         Cashier cashier = new Cashier("Cathy", "Bishop",2,cafe);

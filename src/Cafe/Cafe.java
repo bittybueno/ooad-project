@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Cafe {
 
@@ -20,11 +21,14 @@ public class Cafe {
     private ArrayList<String> pastryMenu;
     private ArrayList<String> toppingsMenu;
 
+    private InventoryRecord restock;
 
-    public Cafe(String employeeFile, String inventoryFile, String customerFile) {
-        this.customerRecord = createCustomerFromInput(customerFile);
+
+    public Cafe(HashMap<String, String> filenames) {
+        this.customerRecord = createCustomerFromInput(filenames.get("Customers"));
         this.salesRecord = new SalesRecord();
-        this.inventoryRecord = createInventoryFromInput(inventoryFile);
+        this.inventoryRecord = createInventoryFromInput(filenames.get("Inventory"));
+        this.employeeRecord = setEmployeesFromInput(filenames.get("Employees"));
 
         ArrayList<String> beverageMenu = new ArrayList<>();
         this.beverageMenu = beverageMenu;
@@ -33,15 +37,17 @@ public class Cafe {
         ArrayList<String> toppingsMenu = new ArrayList<>();
         this.toppingsMenu = toppingsMenu;
 
-        createEmployees(employeeFile);
-        setBevMenu();
-        setPastryMenu();
-        setToppingsMenu();
-//        createInventoryFromInput();
+        setBevMenu(filenames.get("Beverage"));
+        setPastryMenu(filenames.get("Food"));
+        setToppingsMenu(filenames.get("Toppings"));
     }
 
-    void setBevMenu() {
-        File filename = new File("simulationBevMenu.txt");
+    /**
+     * Take inputted txt file and generate the beverage menu for
+     * the specific cafe
+     */
+    void setBevMenu(String file) {
+        File filename = new File(file);
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
             String line;
@@ -55,8 +61,12 @@ public class Cafe {
         }
     }
 
-    void setToppingsMenu() {
-        File filename = new File("simulationToppingsMenu.txt");
+    /**
+     * Take inputted txt file and generate the toppings menu for
+     * the specific cafe
+     */
+    void setToppingsMenu(String file) {
+        File filename = new File(file);
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
             String line;
@@ -70,8 +80,12 @@ public class Cafe {
         }
     }
 
-    void setPastryMenu() {
-        File filename = new File("simulationPastryMenu.txt");
+    /**
+     * Take inputted txt file and generate the Pastry menu for
+     * the specific cafe
+     */
+    void setPastryMenu(String file) {
+        File filename = new File(file);
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {
 
             String line;
@@ -85,12 +99,10 @@ public class Cafe {
         }
     }
 
-    void createEmployees(String file){
-        EmployeeRecord employeeRecord = new EmployeeRecord();
-        this.employeeRecord = setEmployeesFromInput(file);
-
-    }
-
+    /**
+     * Take inputted txt file and generate the Employees for
+     * the specific cafe
+     */
     EmployeeRecord setEmployeesFromInput(String file) {
         EmployeeRecord employeeRecord = new EmployeeRecord();
 //        System.out.println(this.inputEmployees);
@@ -123,6 +135,10 @@ public class Cafe {
         return employeeRecord;
     }
 
+    /**
+     * Take inputted txt file and record what a full
+     * inventory would be in the specific cafe.
+     */
     InventoryRecord createInventoryFromInput(String file){
         InventoryRecord inventory = new InventoryRecord(this);
         File filename = new File(file);
@@ -138,9 +154,16 @@ public class Cafe {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        this.restock = inventory;
+
         return inventory;
     }
 
+    /**
+     * Take inputted txt file and generate a record of prior Loyal
+     * Customers for the specific cafe chain
+     */
     CustomerRecord createCustomerFromInput(String file){
         CustomerRecord customers = new CustomerRecord();
         File filename = new File(file);
@@ -158,11 +181,25 @@ public class Cafe {
         return customers;
     }
 
+    /**
+     * When a product runs out of stock, refills the inventory.
+     * Performed by the Manager (observer)
+     */
+    public void restockCafe() {
+        setInventoryRecord(restock);
+    }
+
+    /* #################### GETTERS AND SETTERS #################### */
+
     public CustomerRecord getCustomerRecord() { return customerRecord; }
 
     public ArrayList<String> getBeverageMenu() {return this.beverageMenu;}
 
     public ArrayList<String> getPastryMenu() {return this.pastryMenu;}
+
+    public void setInventoryRecord(InventoryRecord inventoryRecord) {
+        this.inventoryRecord = inventoryRecord;
+    }
 
     public ArrayList<String> getToppingsMenu() {return this.toppingsMenu;}
 
