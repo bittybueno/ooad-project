@@ -2,41 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a1de46-5f93-4ee6-b84e-5e526745f35d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simulationBevMenu2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulationInventory2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulationTesting.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Tea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulation/simulationBevMenu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Cafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Cafe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/InventoryRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/InventoryRecord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Barista.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Barista.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Chef.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Chef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Observer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/MyUnitTest/MyUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/MyUnitTest/MyUnitTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/BeverageStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/BeverageStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/ExtraShot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/ExtraShot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/PastryStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/PastryStore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/SimpleBeverageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/SimpleBeverageFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/SimplePastryFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/SimplePastryFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/WhipCream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/WhipCream.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Cafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/CustomerRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/CustomerRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/EmployeeRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/EmployeeRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/InventoryRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/InventoryRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Reciept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Reciept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/SalesRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/SalesRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/Barista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Barista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Cashier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Chef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/KitchenEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/KitchenEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/BeverageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/BeverageStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/ExtraShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/ExtraShot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/PastryStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/PastryStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/SimpleBeverageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/SimpleBeverageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/SimplePastryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/SimplePastryFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product/WhipCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/WhipCream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
@@ -48,98 +22,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/Espresso.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/ExtraShot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/Muffin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/Pastry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/PastryStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="111">
+              <caret line="230" column="35" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
               <folding>
-                <element signature="e#131#132#0" expanded="true" />
-                <element signature="e#165#166#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#Simulation#0;class#Simulation#0" />
+                <element signature="method#createNewCustomers#0;class#Simulation#0" />
+                <element signature="docComment;method#customersForTheDay#0;class#Simulation#0" />
+                <element signature="method#customersForTheDay#0;class#Simulation#0" />
+                <element signature="docComment;method#employeesForTheDay#0;class#Simulation#0" />
+                <element signature="method#employeesForTheDay#0;class#Simulation#0" />
+                <element signature="docComment;method#randomBeverageOrder#0;class#Simulation#0" />
+                <element signature="method#randomBeverageOrder#0;class#Simulation#0" />
+                <element signature="docComment;method#randomToppingsOrder#0;class#Simulation#0" />
+                <element signature="method#randomToppingsOrder#0;class#Simulation#0" />
+                <element signature="docComment;method#randomPastryOrder#0;class#Simulation#0" />
+                <element signature="method#randomPastryOrder#0;class#Simulation#0" />
+                <element signature="docComment;method#order#0;class#Simulation#0" />
+                <element signature="method#order#0;class#Simulation#0" />
+                <element signature="method#daySimulation#0;class#Simulation#0" />
+                <element signature="docComment;method#weeklySim#0;class#Simulation#0" />
+                <element signature="method#weeklySim#0;class#Simulation#0" />
+                <element signature="method#printEmployees#0;class#Simulation#0" />
+                <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
+                <element signature="method#printCustomerOrder#0;class#Simulation#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/SimpleBeverageFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/Tea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Product/WhipCream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product/SimplePastryFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/simulation/simulationBevMenu.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -208,7 +125,6 @@
         <option value="$PROJECT_DIR$/src/Cafe/Command.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Cafe.java" />
         <option value="$PROJECT_DIR$/src/Cafe/InventoryRecord.java" />
-        <option value="$PROJECT_DIR$/src/Simulation.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Order.java" />
         <option value="$PROJECT_DIR$/src/Cafe/SalesRecord.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Subject.java" />
@@ -224,6 +140,7 @@
         <option value="$PROJECT_DIR$/src/Product/SimplePastryFactory.java" />
         <option value="$PROJECT_DIR$/src/Product/SimpleBeverageFactory.java" />
         <option value="$PROJECT_DIR$/src/Product/WhipCream.java" />
+        <option value="$PROJECT_DIR$/src/Simulation.java" />
       </list>
     </option>
   </component>
@@ -247,37 +164,7 @@
             <path>
               <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Cafe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Employee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MyUnitTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
+              <item name="simulation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,7 +181,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575671623229" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575672076229" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -305,9 +192,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simulation" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Cafe" />
@@ -447,7 +336,7 @@
       <workItem from="1575336074257" duration="578000" />
       <workItem from="1575403862773" duration="2168000" />
       <workItem from="1575413841062" duration="924000" />
-      <workItem from="1575568853445" duration="7491000" />
+      <workItem from="1575568853445" duration="7726000" />
     </task>
     <servers />
   </component>
@@ -484,7 +373,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79765000" />
+    <option name="totallyTimeSpent" value="80000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -800,36 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Simulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="198" column="12" selection-start-line="198" selection-end-line="199" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Simulation#0;class#Simulation#0" />
-            <element signature="method#createNewCustomers#0;class#Simulation#0" />
-            <element signature="docComment;method#customersForTheDay#0;class#Simulation#0" />
-            <element signature="method#customersForTheDay#0;class#Simulation#0" />
-            <element signature="docComment;method#employeesForTheDay#0;class#Simulation#0" />
-            <element signature="method#employeesForTheDay#0;class#Simulation#0" />
-            <element signature="docComment;method#randomBeverageOrder#0;class#Simulation#0" />
-            <element signature="method#randomBeverageOrder#0;class#Simulation#0" />
-            <element signature="docComment;method#randomToppingsOrder#0;class#Simulation#0" />
-            <element signature="method#randomToppingsOrder#0;class#Simulation#0" />
-            <element signature="docComment;method#randomPastryOrder#0;class#Simulation#0" />
-            <element signature="method#randomPastryOrder#0;class#Simulation#0" />
-            <element signature="docComment;method#order#0;class#Simulation#0" />
-            <element signature="method#order#0;class#Simulation#0" />
-            <element signature="method#daySimulation#0;class#Simulation#0" />
-            <element signature="docComment;method#weeklySim#0;class#Simulation#0" />
-            <element signature="method#weeklySim#0;class#Simulation#0" />
-            <element signature="method#printEmployees#0;class#Simulation#0" />
-            <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
-            <element signature="method#printCustomerOrder#0;class#Simulation#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Employee/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -950,6 +809,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulation/simulationBevMenu.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="230" column="35" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Simulation#0;class#Simulation#0" />
+            <element signature="method#createNewCustomers#0;class#Simulation#0" />
+            <element signature="docComment;method#customersForTheDay#0;class#Simulation#0" />
+            <element signature="method#customersForTheDay#0;class#Simulation#0" />
+            <element signature="docComment;method#employeesForTheDay#0;class#Simulation#0" />
+            <element signature="method#employeesForTheDay#0;class#Simulation#0" />
+            <element signature="docComment;method#randomBeverageOrder#0;class#Simulation#0" />
+            <element signature="method#randomBeverageOrder#0;class#Simulation#0" />
+            <element signature="docComment;method#randomToppingsOrder#0;class#Simulation#0" />
+            <element signature="method#randomToppingsOrder#0;class#Simulation#0" />
+            <element signature="docComment;method#randomPastryOrder#0;class#Simulation#0" />
+            <element signature="method#randomPastryOrder#0;class#Simulation#0" />
+            <element signature="docComment;method#order#0;class#Simulation#0" />
+            <element signature="method#order#0;class#Simulation#0" />
+            <element signature="method#daySimulation#0;class#Simulation#0" />
+            <element signature="docComment;method#weeklySim#0;class#Simulation#0" />
+            <element signature="method#weeklySim#0;class#Simulation#0" />
+            <element signature="method#printEmployees#0;class#Simulation#0" />
+            <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
+            <element signature="method#printCustomerOrder#0;class#Simulation#0" />
+          </folding>
         </state>
       </provider>
     </entry>

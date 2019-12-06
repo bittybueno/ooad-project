@@ -225,12 +225,12 @@ public class Simulation {
         Simulation sim = new Simulation();
 
         HashMap<String, String> filenames = new HashMap<String, String>();
-        filenames.put("Employees", "simulationEmployees.txt");
-        filenames.put("Inventory", "simulationInventory.txt");
-        filenames.put("Customers", "simulationCustomers.txt");
-        filenames.put("Beverage", "simulationBevMenu.txt");
-        filenames.put("Food", "simulationPastryMenu.txt");
-        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        filenames.put("Employees", "simulation/simulationEmployees.txt");
+        filenames.put("Inventory", "simulation/simulationInventory.txt");
+        filenames.put("Customers", "simulation/simulationCustomers.txt");
+        filenames.put("Beverage", "simulation/simulationBevMenu.txt");
+        filenames.put("Food", "simulation/simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulation/simulationToppingsMenu.txt");
 
         Cafe cafe = new Cafe(filenames );
         sim.setCafe(cafe);

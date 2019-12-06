@@ -15,12 +15,12 @@ public class MyUnitTest {
     @Test
     public void testTakeOrderBeverage() {
         HashMap<String, String> filenames = new HashMap<String, String>();
-        filenames.put("Employees", "simulationEmployees.txt");
-        filenames.put("Inventory", "simulationInventory.txt");
-        filenames.put("Customers", "simulationCustomers.txt");
-        filenames.put("Beverage", "simulationBevMenu.txt");
-        filenames.put("Food", "simulationPastryMenu.txt");
-        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        filenames.put("Employees", "simulation/simulationEmployees.txt");
+        filenames.put("Inventory", "simulation/simulationInventory.txt");
+        filenames.put("Customers", "simulation/simulationCustomers.txt");
+        filenames.put("Beverage", "simulation/simulationBevMenu.txt");
+        filenames.put("Food", "simulation/simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulation/simulationToppingsMenu.txt");
         Cafe cafe = new Cafe(filenames );
 
 
@@ -50,12 +50,12 @@ public class MyUnitTest {
     @Test
     public void testTakeOrderTwoBeverages() {
         HashMap<String, String> filenames = new HashMap<String, String>();
-        filenames.put("Employees", "simulationEmployees.txt");
-        filenames.put("Inventory", "simulationInventory.txt");
-        filenames.put("Customers", "simulationCustomers.txt");
-        filenames.put("Beverage", "simulationBevMenu.txt");
-        filenames.put("Food", "simulationPastryMenu.txt");
-        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        filenames.put("Employees", "simulation/simulationEmployees.txt");
+        filenames.put("Inventory", "simulation/simulationInventory.txt");
+        filenames.put("Customers", "simulation/simulationCustomers.txt");
+        filenames.put("Beverage", "simulation/simulationBevMenu.txt");
+        filenames.put("Food", "simulation/simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulation/simulationToppingsMenu.txt");
         Cafe cafe = new Cafe(filenames );
 
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
@@ -85,12 +85,12 @@ public class MyUnitTest {
     @Test
     public void testTakeOrderFood() {
         HashMap<String, String> filenames = new HashMap<String, String>();
-        filenames.put("Employees", "simulationEmployees.txt");
-        filenames.put("Inventory", "simulationInventory.txt");
-        filenames.put("Customers", "simulationCustomers.txt");
-        filenames.put("Beverage", "simulationBevMenu.txt");
-        filenames.put("Food", "simulationPastryMenu.txt");
-        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        filenames.put("Employees", "simulation/simulationEmployees.txt");
+        filenames.put("Inventory", "simulation/simulationInventory.txt");
+        filenames.put("Customers", "simulation/simulationCustomers.txt");
+        filenames.put("Beverage", "simulation/simulationBevMenu.txt");
+        filenames.put("Food", "simulation/simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulation/simulationToppingsMenu.txt");
         Cafe cafe = new Cafe(filenames );
 
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);
@@ -117,12 +117,12 @@ public class MyUnitTest {
     @Test
     public void testInventory() {
         HashMap<String, String> filenames = new HashMap<String, String>();
-        filenames.put("Employees", "simulationEmployees.txt");
-        filenames.put("Inventory", "simulationInventory.txt");
-        filenames.put("Customers", "simulationCustomers.txt");
-        filenames.put("Beverage", "simulationBevMenu.txt");
-        filenames.put("Food", "simulationPastryMenu.txt");
-        filenames.put("Toppings", "simulationToppingsMenu.txt");
+        filenames.put("Employees", "simulation/simulationEmployees.txt");
+        filenames.put("Inventory", "simulation/simulationInventory.txt");
+        filenames.put("Customers", "simulation/simulationCustomers.txt");
+        filenames.put("Beverage", "simulation/simulationBevMenu.txt");
+        filenames.put("Food", "simulation/simulationPastryMenu.txt");
+        filenames.put("Toppings", "simulation/simulationToppingsMenu.txt");
         Cafe cafe = new Cafe(filenames );
 
         Barista barista = new Barista("Don", "Jeremy", 1, cafe);

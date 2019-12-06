@@ -10,7 +10,7 @@ public class WhipCream extends BeverageDecorator{
     public String getDescription() {
         return beverage.getDescription() + ", Whip Cream";
     }
-    
+
     public double cost() {
         return .20 + beverage.cost();
     }
