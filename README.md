@@ -1,26 +1,28 @@
-# ooad-project
+# Cafe POS System
+#### Marissa Bueno
 
-An Object Oriented Cafe System
-- sales
-- inventory
-- rewards membership
+An Object Oriented Cafe System that handles 
+- Sales & Transactions Services
+- Inventory Tracking & Management
+- Loyalty Program
 
 
-Design Patterns:
+Design Patterns that were used in this program:
 - Factory
-  - creating products (beverages & pastries)
+  - Instantiating Products (beverages & pastries)
 
 - Template
-  - chef & barista
+  - Chef & Barista Algorithms
 
 - Command
-  - orders
+  - Handling Orders
+  - Cashier, Orders, Chef/Barista
 
 - Decorator
-  - pricing for add-ons
+  - Pricing for add-ons
 
 - Observer
-  - low inventory
+  - Restocking Low Inventory when necessary
   
   ## Tools
   - Written in Java 8 using SDK 11. Developed using VS Code. 
