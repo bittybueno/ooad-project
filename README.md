@@ -8,7 +8,7 @@ that always seems to form at the coffee bar. If customers had a way to watch the
 status of their beverages and pastries as they were getting made, visiting coffee shops
 would be even more enjoyable. 
 
-
+#### Features
 An Object Oriented Cafe System that handles 
 - Sales & Transactions Services
 - Inventory Tracking & Management
