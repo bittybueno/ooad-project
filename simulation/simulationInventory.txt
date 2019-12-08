@@ -1,4 +1,4 @@
 Coffee:300
-Espresso:300
+Espresso:150
 Muffin:100
 Bread:100
