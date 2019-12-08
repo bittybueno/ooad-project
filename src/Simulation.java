@@ -95,10 +95,7 @@ public class Simulation {
             }
             m++;
         }
-
-
         return employees;
-
     }
 
     /**
@@ -237,11 +234,11 @@ public class Simulation {
         sim.weeklySim();
 
 
-//        filenames.put("Inventory", "simulationInventory2.txt");
-//        filenames.put("Beverage", "simulationBevMenu2.txt");
-//
-//        Cafe cafe2 = new Cafe(filenames);
-//        sim.setCafe(cafe2);
-//        sim.weeklySim();
+        filenames.put("Inventory", "simulation/simulationInventory2.txt");
+        filenames.put("Beverage", "simulation/simulationBevMenu2.txt");
+
+        Cafe cafe2 = new Cafe(filenames);
+        sim.setCafe(cafe2);
+        sim.weeklySim();
     }
 }

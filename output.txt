@@ -1,0 +1,1425 @@
+________Cafe Inventory________
+
+Espresso: 300
+Muffin: 100
+Coffee: 300
+Bread: 100
+______________________________
+
+
+
+####### Day 0#######
+Manager: Jeffery Diaz
+Cashier: Katie Andres
+Barista: Keith Harper
+Chef: Robert Dirvine
+
+
+###################################
+ Jose would like - Coffee -- Bread -- Whip Cream -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Jose!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Jose!
+
+********* Reciept *********
+Customer Name: Jose
+Coffee, Whip Cream ... $2.19
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $7.19
+***************************
+
+
+###################################
+ Diego would like - Espresso -- Espresso -- Muffin -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Diego!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Robert Dirvine: Order for Diego!
+
+********* Reciept *********
+Customer Name: Diego
+Espresso ... $3.0
+Espresso ... $3.0
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $10.00
+***************************
+
+
+###################################
+ Jarrod would like - Coffee -- Bread -- Extra Shot -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Jarrod!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Jarrod!
+
+********* Reciept *********
+Customer Name: Jarrod
+Coffee, Extra Shot ... $2.49
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $7.49
+***************************
+
+
+###################################
+ Hodge would like - Espresso -- Espresso -- Bread -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Hodge!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Hodge!
+
+********* Reciept *********
+Customer Name: Hodge
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $11.50
+***************************
+
+
+###################################
+ Parker would like - Espresso -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Parker!'
+
+********* Reciept *********
+Customer Name: Parker
+Espresso, Extra Shot ... $3.5
+Savings: $0.00
+-----------------------------
+Cost: $3.50
+***************************
+
+
+###################################
+ Tim would like - Espresso -- Coffee -- Coffee -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Tim!'
+
+********* Reciept *********
+Customer Name: Tim
+Espresso, Extra Shot ... $3.5
+Coffee ... $1.99
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $7.48
+***************************
+
+
+###################################
+ Colby would like - Espresso -- Espresso -- Coffee -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Colby!'
+
+********* Reciept *********
+Customer Name: Colby
+Espresso ... $3.0
+Espresso ... $3.0
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $7.99
+***************************
+
+
+###################################
+ Paul would like - Espresso -- Espresso -- Espresso -- Bread -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Paul!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Paul!
+
+********* Reciept *********
+Customer Name: Paul
+Espresso ... $3.0
+Espresso ... $3.0
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $14.00
+***************************
+
+
+####### Day 1#######
+Manager: Bret Barker
+Cashier: Katie Andres
+Barista: David Baker
+Chef: Bobby Day
+
+
+###################################
+ Kathy would like - Espresso -- Espresso -- Coffee -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Kathy!'
+
+********* Reciept *********
+Customer Name: Kathy
+Espresso ... $3.0
+Espresso ... $3.0
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $7.99
+***************************
+
+
+###################################
+ Parker would like - Coffee -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Parker!'
+
+********* Reciept *********
+Customer Name: Parker
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $1.99
+***************************
+
+
+###################################
+ Tanner would like - Espresso -
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Tanner!'
+
+********* Reciept *********
+Customer Name: Tanner
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $3.00
+***************************
+
+
+###################################
+ Paul would like - Espresso -- Coffee -- Espresso -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Paul!'
+
+********* Reciept *********
+Customer Name: Paul
+Espresso ... $3.0
+Coffee ... $1.99
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $7.99
+***************************
+
+
+####### Day 2#######
+Manager: Jeffery Diaz
+Cashier: Katie Andres
+Barista: David Baker
+Chef: Robert Dirvine
+
+
+###################################
+ Mike would like - Espresso -- Coffee -- Coffee -- Whip Cream -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Mike!'
+
+********* Reciept *********
+Customer Name: Mike
+Espresso, Whip Cream ... $3.2
+Coffee ... $1.99
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $7.18
+***************************
+
+
+###################################
+ Tim would like - Coffee -- Coffee -- Bread -- Whip Cream -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Tim!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Tim!
+
+********* Reciept *********
+Customer Name: Tim
+Coffee, Whip Cream ... $2.19
+Coffee ... $1.99
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $9.18
+***************************
+
+
+###################################
+ Jarrod would like - Espresso -- Espresso -- Muffin -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Jarrod!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Robert Dirvine: Order for Jarrod!
+
+********* Reciept *********
+Customer Name: Jarrod
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $10.50
+***************************
+
+
+###################################
+ Parker would like - Coffee -- Muffin -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Parker!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Robert Dirvine: Order for Parker!
+
+********* Reciept *********
+Customer Name: Parker
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $5.99
+***************************
+
+
+####### Day 3#######
+Manager: Jeffery Diaz
+Cashier: Katie Andres
+Barista: Keith Harper
+Chef: Robert Dirvine
+
+
+###################################
+ Tanner would like - Espresso -- Espresso -- Coffee -- Bread -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Tanner!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Tanner!
+New Loyal Member!
+
+********* Reciept *********
+Customer Name: Tanner
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Coffee ... $1.99
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $13.49
+***************************
+
+
+###################################
+ Paul would like - Coffee -- Coffee -- Espresso -- Bread -- Extra Shot -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Paul!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Paul!
+
+********* Reciept *********
+Customer Name: Paul
+Coffee, Extra Shot ... $2.49
+Coffee ... $1.99
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $12.48
+***************************
+
+
+####### Day 4#######
+Manager: Bret Barker
+Cashier: Katie Andres
+Barista: David Baker
+Chef: Bobby Day
+
+
+###################################
+ Colby would like - Espresso -- Espresso -- Coffee -- Muffin -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Colby!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Bobby Day: Order for Colby!
+
+********* Reciept *********
+Customer Name: Colby
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $12.49
+***************************
+
+
+###################################
+ Tanner would like - Espresso -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Tanner!'
+
+********* Reciept *********
+Customer Name: Tanner
+Espresso, Extra Shot ... $3.5
+Savings: $0.00
+-----------------------------
+Cost: $3.50
+***************************
+
+
+###################################
+ David would like - Espresso -- Coffee -- Espresso -- Whip Cream -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for David!'
+
+********* Reciept *********
+Customer Name: David
+Espresso, Whip Cream ... $3.2
+Coffee ... $1.99
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $8.19
+***************************
+
+
+###################################
+ Jarrod would like - Coffee -- Whip Cream -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Jarrod!'
+
+********* Reciept *********
+Customer Name: Jarrod
+Coffee, Whip Cream ... $2.19
+Savings: $0.00
+-----------------------------
+Cost: $2.19
+***************************
+
+
+###################################
+ Kathy would like - Coffee -- Espresso -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Kathy!'
+
+********* Reciept *********
+Customer Name: Kathy
+Coffee ... $1.99
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $4.99
+***************************
+
+
+###################################
+ Mike would like - Coffee -- Coffee -- Bread -- Extra Shot -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Mike!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Bobby Day: Order for Mike!
+
+********* Reciept *********
+Customer Name: Mike
+Coffee, Extra Shot ... $2.49
+Coffee ... $1.99
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $9.48
+***************************
+
+
+###################################
+ Terri would like - Espresso -- Coffee -- Muffin -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Terri!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Bobby Day: Order for Terri!
+
+********* Reciept *********
+Customer Name: Terri
+Espresso ... $3.0
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $8.99
+***************************
+
+
+###################################
+ Parker would like - Espresso -- Coffee -- Espresso -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Parker!'
+
+********* Reciept *********
+Customer Name: Parker
+Espresso ... $3.0
+Coffee ... $1.99
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $7.99
+***************************
+
+
+###################################
+ Tim would like - Coffee -- Coffee -- Whip Cream -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Tim!'
+
+********* Reciept *********
+Customer Name: Tim
+Coffee, Whip Cream ... $2.19
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $4.18
+***************************
+
+
+###################################
+ Eric would like - Coffee -- Coffee -- Muffin -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Eric!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Bobby Day: Order for Eric!
+
+********* Reciept *********
+Customer Name: Eric
+Coffee ... $1.99
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $7.98
+***************************
+
+
+###################################
+ Connie would like - Coffee -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Connie!'
+New Loyal Member!
+
+********* Reciept *********
+Customer Name: Connie
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $1.99
+***************************
+
+
+####### Day 5#######
+Manager: Jeffery Diaz
+Cashier: Katie Andres
+Barista: David Baker
+Chef: Robert Dirvine
+
+
+###################################
+ Terri would like - Coffee -- Coffee -- Bread -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Terri!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Terri!
+
+********* Reciept *********
+Customer Name: Terri
+Coffee ... $1.99
+Coffee ... $1.99
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $8.98
+***************************
+
+
+###################################
+ Diego would like - Coffee -- Coffee -- Muffin -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Diego!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Robert Dirvine: Order for Diego!
+
+********* Reciept *********
+Customer Name: Diego
+Coffee ... $1.99
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $7.98
+***************************
+
+
+###################################
+ David would like - Espresso -- Coffee -- Whip Cream -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for David!'
+
+********* Reciept *********
+Customer Name: David
+Espresso, Whip Cream ... $3.2
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $5.19
+***************************
+
+
+###################################
+ Colby would like - Coffee -- Coffee -- Muffin -- Whip Cream -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Colby!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Robert Dirvine: Order for Colby!
+
+********* Reciept *********
+Customer Name: Colby
+Coffee, Whip Cream ... $2.19
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $8.18
+***************************
+
+
+###################################
+ Tim would like - Coffee -- Extra Shot -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Tim!'
+
+********* Reciept *********
+Customer Name: Tim
+Coffee, Extra Shot ... $2.49
+Savings: $0.00
+-----------------------------
+Cost: $2.49
+***************************
+
+
+###################################
+ Mike would like - Coffee -- Bread -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Mike!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Mike!
+
+********* Reciept *********
+Customer Name: Mike
+Coffee ... $1.99
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $6.99
+***************************
+
+
+###################################
+ Kathy would like - Coffee -- Muffin -
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Kathy!'
+
+... Cooking Muffin...
+... Finished Muffin...
+
+Chef Robert Dirvine: Order for Kathy!
+
+********* Reciept *********
+Customer Name: Kathy
+Coffee ... $1.99
+Muffin ... $4.0
+Savings: $0.00
+-----------------------------
+Cost: $5.99
+***************************
+
+
+###################################
+ Rei would like - Espresso -- Coffee -- Espresso -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Rei!'
+
+********* Reciept *********
+Customer Name: Rei
+Espresso, Extra Shot ... $3.5
+Coffee ... $1.99
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $8.49
+***************************
+
+
+####### Day 6#######
+Manager: Bret Barker
+Cashier: Katie Andres
+Barista: Keith Harper
+Chef: Robert Dirvine
+
+
+###################################
+ Tanner would like - Espresso -- Espresso -- Espresso -- Whip Cream -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Tanner!'
+
+********* Reciept *********
+Customer Name: Tanner
+Espresso, Whip Cream ... $3.2
+Espresso ... $3.0
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $9.20
+***************************
+
+
+###################################
+ Hodge would like - Coffee -- Coffee -- Whip Cream -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Hodge!'
+
+********* Reciept *********
+Customer Name: Hodge
+Coffee, Whip Cream ... $2.19
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $4.18
+***************************
+
+
+###################################
+ Diego would like - Espresso -- Espresso -- Coffee -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Diego!'
+
+********* Reciept *********
+Customer Name: Diego
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $8.49
+***************************
+
+
+###################################
+ Terri would like - Espresso -- Espresso -- Bread -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Terri!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Terri!
+
+********* Reciept *********
+Customer Name: Terri
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $11.50
+***************************
+
+
+###################################
+ Mike would like - Coffee -- Coffee -- Espresso -- Bread -
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Mike!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Mike!
+
+********* Reciept *********
+Customer Name: Mike
+Coffee ... $1.99
+Coffee ... $1.99
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $11.98
+***************************
+
+
+###################################
+ Tim would like - Espresso -- Coffee -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista Keith Harper: 'Order for Tim!'
+
+********* Reciept *********
+Customer Name: Tim
+Espresso ... $3.0
+Coffee ... $1.99
+Savings: $0.00
+-----------------------------
+Cost: $4.99
+***************************
+
+
+###################################
+ Colby would like - Espresso -- Espresso -- Espresso -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Colby!'
+
+********* Reciept *********
+Customer Name: Colby
+Espresso, Extra Shot ... $3.5
+Espresso ... $3.0
+Espresso ... $3.0
+Savings: $0.00
+-----------------------------
+Cost: $9.50
+***************************
+
+
+###################################
+ Tanner would like - Espresso -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista Keith Harper: 'Order for Tanner!'
+
+********* Reciept *********
+Customer Name: Tanner
+Espresso, Extra Shot ... $3.5
+Savings: $0.00
+-----------------------------
+Cost: $3.50
+***************************
+
+
+####### Day 7#######
+Manager: Jeffery Diaz
+Cashier: Ellen Joshery
+Barista: David Baker
+Chef: Robert Dirvine
+
+
+###################################
+ David would like - Espresso -- Bread -- Whip Cream -
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for David!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for David!
+
+********* Reciept *********
+Customer Name: David
+Espresso, Whip Cream ... $3.2
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $8.20
+***************************
+
+
+###################################
+ Jose would like - Espresso -- Espresso -- Bread -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Jose!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Jose!
+
+********* Reciept *********
+Customer Name: Jose
+Espresso ... $3.0
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $11.00
+***************************
+
+
+###################################
+ Connie would like - Espresso -- Espresso -- Espresso -- Bread -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Espresso...
+...Finished Espresso...
+
+Barista David Baker: 'Order for Connie!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Connie!
+
+********* Reciept *********
+Customer Name: Connie
+Espresso ... $3.0
+Espresso ... $3.0
+Espresso ... $3.0
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $14.00
+***************************
+
+
+###################################
+ Paul would like - Espresso -- Coffee -- Coffee -- Bread -- Extra Shot -
+...Brewing Espresso...
+...Finished Espresso...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+
+...Brewing Coffee...
+...Finished Coffee...
+
+Barista David Baker: 'Order for Paul!'
+
+... Cooking Bread...
+... Finished Bread...
+
+Chef Robert Dirvine: Order for Paul!
+
+********* Reciept *********
+Customer Name: Paul
+Espresso, Extra Shot ... $3.5
+Coffee ... $1.99
+Coffee ... $1.99
+Bread ... $5.0
+Savings: $0.00
+-----------------------------
+Cost: $12.48
+***************************
+
+________Cafe Inventory________
+
+Espresso: 162
+Muffin: 91
+Coffee: 194
+Bread: 84
+______________________________
+
+
+________Cafe Sales Record________
+
+Customer Name: Jose
+Cost: $7.19
+
+Customer Name: Diego
+Cost: $10.00
+
+Customer Name: Jarrod
+Cost: $7.49
+
+Customer Name: Hodge
+Cost: $11.50
+
+Customer Name: Parker
+Cost: $3.50
+
+Customer Name: Tim
+Cost: $7.48
+
+Customer Name: Colby
+Cost: $7.99
+
+Customer Name: Paul
+Cost: $14.00
+
+Customer Name: Kathy
+Cost: $7.99
+
+Customer Name: Parker
+Cost: $1.99
+
+Customer Name: Tanner
+Cost: $3.00
+
+Customer Name: Paul
+Cost: $7.99
+
+Customer Name: Mike
+Cost: $7.18
+
+Customer Name: Tim
+Cost: $9.18
+
+Customer Name: Jarrod
+Cost: $10.50
+
+Customer Name: Parker
+Cost: $5.99
+
+Customer Name: Tanner
+Cost: $13.49
+
+Customer Name: Paul
+Cost: $12.48
+
+Customer Name: Colby
+Cost: $12.49
+
+Customer Name: Tanner
+Cost: $3.50
+
+Customer Name: David
+Cost: $8.19
+
+Customer Name: Jarrod
+Cost: $2.19
+
+Customer Name: Kathy
+Cost: $4.99
+
+Customer Name: Mike
+Cost: $9.48
+
+Customer Name: Terri
+Cost: $8.99
+
+Customer Name: Parker
+Cost: $7.99
+
+Customer Name: Tim
+Cost: $4.18
+
+Customer Name: Eric
+Cost: $7.98
+
+Customer Name: Connie
+Cost: $1.99
+
+Customer Name: Terri
+Cost: $8.98
+
+Customer Name: Diego
+Cost: $7.98
+
+Customer Name: David
+Cost: $5.19
+
+Customer Name: Colby
+Cost: $8.18
+
+Customer Name: Tim
+Cost: $2.49
+
+Customer Name: Mike
+Cost: $6.99
+
+Customer Name: Kathy
+Cost: $5.99
+
+Customer Name: Rei
+Cost: $8.49
+
+Customer Name: Tanner
+Cost: $9.20
+
+Customer Name: Hodge
+Cost: $4.18
+
+Customer Name: Diego
+Cost: $8.49
+
+Customer Name: Terri
+Cost: $11.50
+
+Customer Name: Mike
+Cost: $11.98
+
+Customer Name: Tim
+Cost: $4.99
+
+Customer Name: Colby
+Cost: $9.50
+
+Customer Name: Tanner
+Cost: $3.50
+
+Customer Name: David
+Cost: $8.20
+
+Customer Name: Jose
+Cost: $11.00
+
+Customer Name: Connie
+Cost: $14.00
+
+Customer Name: Paul
+Cost: $12.48
+
+______________________________

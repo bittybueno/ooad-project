@@ -105,7 +105,6 @@ public class Cafe {
      */
     EmployeeRecord setEmployeesFromInput(String file) {
         EmployeeRecord employeeRecord = new EmployeeRecord();
-//        System.out.println(this.inputEmployees);
         File filename = new File(file);
 
         try (BufferedReader inputFile = new BufferedReader(new FileReader(filename.getAbsolutePath()))) {

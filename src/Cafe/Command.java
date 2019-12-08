@@ -1,6 +1,6 @@
 package Cafe;
 
-// OBSERVER DESIGN PATTERN
+// COMMAND DESIGN PATTERN
 
 public interface Command {
     void execute(String type);
