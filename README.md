@@ -33,7 +33,7 @@ Design Patterns that were used in this program:
 - Observer
   - Restocking Low Inventory when necessary
   
-  ## Tools
+ ## Tools
   * Java 8
   * SDK 11
   * VS Code
