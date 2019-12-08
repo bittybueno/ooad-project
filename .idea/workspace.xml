@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a1de46-5f93-4ee6-b84e-5e526745f35d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Cafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Cafe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Cafe/Order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Employee/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Employee/Cashier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Cafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Cafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cafe/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee/Cashier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +13,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
+            <state relative-caret-position="858">
               <caret line="239" column="8" selection-start-line="239" selection-start-column="8" selection-end-line="241" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Employee/Cashier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="329">
+              <caret line="99" column="44" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#takeOrder#0;class#Cashier#0" />
@@ -172,9 +164,10 @@
       <find>ba</find>
       <find>barista</find>
       <find>Savings: $5</find>
-      <find>savings: $5</find>
       <find>tea</find>
       <find>kathy</find>
+      <find>savings: $5</find>
+      <find>paul</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -231,9 +224,9 @@
         <option value="$PROJECT_DIR$/src/Cafe/Order.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Cafe.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Command.java" />
-        <option value="$PROJECT_DIR$/src/Employee/Cashier.java" />
         <option value="$PROJECT_DIR$/output.txt" />
         <option value="$PROJECT_DIR$/src/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/Employee/Cashier.java" />
       </list>
     </option>
   </component>
@@ -303,7 +296,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575830218448" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575830380591" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -459,7 +452,7 @@
       <workItem from="1575403862773" duration="2168000" />
       <workItem from="1575413841062" duration="924000" />
       <workItem from="1575568853445" duration="7979000" />
-      <workItem from="1575749812166" duration="1642000" />
+      <workItem from="1575749812166" duration="1787000" />
     </task>
     <servers />
   </component>
@@ -496,7 +489,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81895000" />
+    <option name="totallyTimeSpent" value="82040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -907,28 +900,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Employee/Cashier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#takeOrder#0;class#Cashier#0" />
-            <element signature="method#takeOrder#0;class#Cashier#0" />
-            <element signature="docComment;method#calculatePrice#0;class#Cashier#0" />
-            <element signature="method#calculatePrice#0;class#Cashier#0" />
-            <element signature="method#isRewardsCustomer#0;class#Cashier#0" />
-            <element signature="docComment;method#askToSignUp#0;class#Cashier#0" />
-            <element signature="method#askToSignUp#0;class#Cashier#0" />
-            <element signature="docComment;method#addNewLoyal#0;class#Cashier#0" />
-            <element signature="docComment;method#applyRewards#0;class#Cashier#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
+        <state relative-caret-position="858">
           <caret line="239" column="8" selection-start-line="239" selection-start-column="8" selection-end-line="241" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -951,6 +925,25 @@
             <element signature="method#printEmployees#0;class#Simulation#0" />
             <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
             <element signature="method#printCustomerOrder#0;class#Simulation#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Employee/Cashier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="99" column="44" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#takeOrder#0;class#Cashier#0" />
+            <element signature="method#takeOrder#0;class#Cashier#0" />
+            <element signature="docComment;method#calculatePrice#0;class#Cashier#0" />
+            <element signature="method#calculatePrice#0;class#Cashier#0" />
+            <element signature="method#isRewardsCustomer#0;class#Cashier#0" />
+            <element signature="docComment;method#askToSignUp#0;class#Cashier#0" />
+            <element signature="method#askToSignUp#0;class#Cashier#0" />
+            <element signature="docComment;method#addNewLoyal#0;class#Cashier#0" />
+            <element signature="docComment;method#applyRewards#0;class#Cashier#0" />
           </folding>
         </state>
       </provider>

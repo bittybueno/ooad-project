@@ -97,7 +97,7 @@ public class Cashier extends Employee{
     double applyRewards(double price, Customer customer) {
         customer.setLoyaltyPoints(price);
 
-        if (customer.getLoyaltyPoints() > 75) {
+        if (customer.getLoyaltyPoints() > 60) {
             return price - 2.00;
         }
 
