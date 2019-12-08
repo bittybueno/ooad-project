@@ -36,6 +36,10 @@ public class Order implements Command{
         this.products = products;
     }
 
+    /**
+     * Order must implement the execute method as it in a Command object.
+     * Execute triggers the reciever.action() method call
+     */
     public void execute(String type) {
         Barista barista = this.getBarista();
         Chef chef = this.getChef();

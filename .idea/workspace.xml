@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a1de46-5f93-4ee6-b84e-5e526745f35d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simulation/simulationBevMenu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/BeverageStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/BeverageStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/ExtraShot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/ExtraShot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/PastryStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/PastryStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/SimpleBeverageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/SimpleBeverageFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/SimplePastryFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/SimplePastryFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Product/WhipCream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Product/WhipCream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ooad-project/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/WhipCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/WhipCream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cafe/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cafe/Order.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="230" column="35" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="232" column="46" selection-start-line="232" selection-start-column="46" selection-end-line="232" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Simulation#0;class#Simulation#0" />
@@ -54,9 +45,42 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cafe/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#Order#0;class#Order#0" />
+                <element signature="method#Order#0;class#Order#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simulation/simulationBevMenu.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#testTakeOrderBeverage#0;class#MyUnitTest#0" />
+                <element signature="method#testTakeOrderTwoBeverages#0;class#MyUnitTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -119,13 +143,11 @@
         <option value="$PROJECT_DIR$/simulationBevMenu.txt" />
         <option value="$PROJECT_DIR$/simulationTesting.txt" />
         <option value="$PROJECT_DIR$/src/Cafe/Reciept.java" />
-        <option value="$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java" />
         <option value="$PROJECT_DIR$/src/Cafe/CustomerRecord.java" />
         <option value="$PROJECT_DIR$/src/Cafe/EmployeeRecord.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Command.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Cafe.java" />
         <option value="$PROJECT_DIR$/src/Cafe/InventoryRecord.java" />
-        <option value="$PROJECT_DIR$/src/Cafe/Order.java" />
         <option value="$PROJECT_DIR$/src/Cafe/SalesRecord.java" />
         <option value="$PROJECT_DIR$/src/Cafe/Subject.java" />
         <option value="$PROJECT_DIR$/src/Employee/KitchenEmployee.java" />
@@ -141,6 +163,8 @@
         <option value="$PROJECT_DIR$/src/Product/SimpleBeverageFactory.java" />
         <option value="$PROJECT_DIR$/src/Product/WhipCream.java" />
         <option value="$PROJECT_DIR$/src/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/Cafe/Order.java" />
       </list>
     </option>
   </component>
@@ -164,14 +188,26 @@
             <path>
               <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Cafe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ooad-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ooad-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="MyUnitTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,7 +217,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575672076229" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575829548281" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -196,11 +232,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simulation" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Cafe" />
-      <recent name="$PROJECT_DIR$/src/Simulation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -336,23 +372,12 @@
       <workItem from="1575336074257" duration="578000" />
       <workItem from="1575403862773" duration="2168000" />
       <workItem from="1575413841062" duration="924000" />
-      <workItem from="1575568853445" duration="7726000" />
+      <workItem from="1575568853445" duration="7979000" />
+      <workItem from="1575749812166" duration="1037000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyUnitTest_testTakeOrderFood - 2019.11.20 at 16h 07m 08s.xml">
-      <configuration name="MyUnitTest.testTakeOrderFood" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyUnitTest_testFoodInventory - 2019.11.20 at 16h 12m 31s.xml">
-      <configuration name="MyUnitTest.testFoodInventory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyUnitTest - 2019.11.20 at 16h 13m 11s.xml">
-      <configuration name="MyUnitTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyUnitTest - 2019.12.02 at 18h 21m 26s.xml">
-      <configuration name="MyUnitTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MyUnitTest_testTakeOrderBeverage - 2019.12.06 at 11h 56m 56s.xml">
       <configuration name="MyUnitTest.testTakeOrderBeverage" configurationId="JUnit" />
     </history-entry>
@@ -371,15 +396,27 @@
     <history-entry file="MyUnitTest - 2019.12.06 at 11h 59m 05s.xml">
       <configuration name="MyUnitTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MyUnitTest_testTakeOrderBeverage - 2019.12.06 at 15h 40m 02s.xml">
+      <configuration name="MyUnitTest.testTakeOrderBeverage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyUnitTest_testTakeOrderBeverage - 2019.12.06 at 15h 40m 13s.xml">
+      <configuration name="MyUnitTest.testTakeOrderBeverage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyUnitTest_testTakeOrderTwoBeverages - 2019.12.06 at 15h 40m 30s.xml">
+      <configuration name="MyUnitTest.testTakeOrderTwoBeverages" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyUnitTest - 2019.12.06 at 15h 40m 56s.xml">
+      <configuration name="MyUnitTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80000000" />
+    <option name="totallyTimeSpent" value="81290000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -420,14 +457,14 @@
     <entry file="file://$PROJECT_DIR$/src/Product/Subject.java" />
     <entry file="file://$PROJECT_DIR$/src/hello_world.java" />
     <entry file="file://$PROJECT_DIR$/src/Cafe/RecordClass.java" />
-    <entry file="file://$PROJECT_DIR$/simulationToppingsMenu.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationToppingsMenu.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationPastryMenu.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationPastryMenu.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
@@ -446,21 +483,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationCustomers.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationCustomers.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationEmployees.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationEmployees.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationTesting.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationTesting.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cafe/Reciept.java">
@@ -470,55 +507,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationInventory.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationInventory.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationBevMenu2.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationBevMenu2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulationInventory2.txt">
+    <entry file="file://$PROJECT_DIR$/simulation/simulationInventory2.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#271#1613#0" />
-            <element signature="e#375#391#0" expanded="true" />
-            <element signature="e#1093#1101#0" expanded="true" />
-            <element signature="e#1151#1159#0" expanded="true" />
-            <element signature="e#1213#1221#0" expanded="true" />
-            <element signature="e#1620#2658#0" />
-            <element signature="e#1719#1735#0" expanded="true" />
-            <element signature="e#2109#2117#0" expanded="true" />
-            <element signature="e#2167#2175#0" expanded="true" />
-            <element signature="e#2229#2237#0" expanded="true" />
-            <element signature="method#testTakeOrderFood#0;class#MyUnitTest#0" />
-            <element signature="e#3092#3108#0" expanded="true" />
-            <element signature="e#3482#3490#0" expanded="true" />
-            <element signature="e#3540#3548#0" expanded="true" />
-            <element signature="e#3602#3610#0" expanded="true" />
-            <element signature="method#testInventory#0;class#MyUnitTest#0" />
-            <element signature="e#4431#4447#0" expanded="true" />
-            <element signature="e#4821#4829#0" expanded="true" />
-            <element signature="e#4879#4887#0" expanded="true" />
-            <element signature="e#4941#4949#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simulationBevMenu.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cafe/Command.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -549,19 +549,6 @@
             <element signature="docComment;method#restockCafe#0;class#Cafe#0" />
             <element signature="e#6331#6332#0" expanded="true" />
             <element signature="e#6385#6386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cafe/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Order#0;class#Order#0" />
-            <element signature="method#Order#0;class#Order#0" />
-            <element signature="method#execute#0;class#Order#0" />
           </folding>
         </state>
       </provider>
@@ -815,10 +802,30 @@
     <entry file="file://$PROJECT_DIR$/simulation/simulationBevMenu.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyUnitTest/MyUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testTakeOrderBeverage#0;class#MyUnitTest#0" />
+            <element signature="method#testTakeOrderTwoBeverages#0;class#MyUnitTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="230" column="35" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+        <state relative-caret-position="221">
+          <caret line="232" column="46" selection-start-line="232" selection-start-column="46" selection-end-line="232" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Simulation#0;class#Simulation#0" />
@@ -841,6 +848,18 @@
             <element signature="method#printEmployees#0;class#Simulation#0" />
             <element signature="docComment;method#printCustomerOrder#0;class#Simulation#0" />
             <element signature="method#printCustomerOrder#0;class#Simulation#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cafe/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Order#0;class#Order#0" />
+            <element signature="method#Order#0;class#Order#0" />
           </folding>
         </state>
       </provider>
